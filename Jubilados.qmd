@@ -1,0 +1,204 @@
+# Jubilados
+
+## Jubilados Femeninos \[Jubilados F\]
+
+En esta tabla se encuentra información relevante sobre la cantidad de Jubilados femeninos que se espera a lo largo de los años proyectados, también información sobre los salarios, un resumen de todos estos datos estimados, y otras proyecciones que son importantes para el análisis.
+
+### Proyección de las personas
+
+A esta tabla en general se le ha llamado *"Tjub_F"* para determinar estos datos se toman en cuenta parámetros que se detallan a continuación:
+
+-   \[*qj*\] y \[*pja_dm*\] Las probabilidades de fallecer y jubilarse respectivamente. Aquí se hace uso de las probabilidades de que un afiliado abandone el sistema por vejez, llamados decrementos múltiples las cuales se encuentran en la hoja \[*Tablas*\] en la matriz *"Tbiometrica"*
+-   \[*a1-a100*\] cantidades de afiliados jubilados proyectadas que se realizan en el estudio, para este análisis se hace uso de la siguiente formula:
+
+```{=tex}
+\begin{align} {CanJ}_{x,j} &= \left(1-{qj}_{x-1}\right)\times{CanJ}_{x-1,j-1} + \nonumber  \\ &\qquad {pja\_dm}_{x-1}\times{Can}_{x-1,j-1\ }+\ {jub\_sus}_{x,j-1} \end{align}
+```
+Donde:
+
+${CanJ}_{x,j}$ = cantidad de afiliados jubilados de edad x\* en el año *j*.\
+${pja\_dm}_x$ = probabilidad de decremento múltiple de que un activo se jubile a la edad *x*.\
+$Can\_{x-1,j-1}$ = cantidad de afiliados activos de edad *x-1* en el año anterior.\
+${qj}_x$ = Probabilidad de que un jubilado fallezca a la edad *x*.\
+${jub\_sus}_{j,x}$ = cantidad de afiliados en suspenso de edad *x* en el año *j*, este se encuentra en la tabla *"Tjub_sus_F"* de la hoja Suspenso *F*.
+
+Lo antes descrito es una igualdad a la fórmula 5.3.2 Cantidad de afiliados jubilados proyectada que se encuentra en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020)
+
+![Proyección de jubilados](images/F/Img26.png){fig-align="center"}
+
+### Tabla Resumen
+
+En esta sección se encuentra un resumen de información relevante entre ellas, el total de jubilados por años, el porcentaje de crecimiento que se estima a lo largo de los años entre otras, a continuación se describen a detalle cada una de estas:
+
+-   $[Total]$ esta es la suma de todos los afiliados jubilados proyectados por año de todas las edades.
+
+```{=tex}
+\begin{equation}
+Total_j=\sum_{x=18}^{110}{C{anJ}_{x,j}}
+\end{equation}
+```
+-   $[Tasa\_de\_crecimiento]$ representa la tasa de crecimiento poblacional proyectada relacionada con el año anterior y el presente, para ello se hace uso de la siguiente formula
+
+```{=tex}
+\begin{equation}
+{tc}_j=\frac{{Total}_j}{{Total}_{j-1}}-1
+\end{equation}
+```
+-   $[Fallecidos]$ esta representa la suma total de la cantidad proyectada de fallecidos jubilados llamada *"Tfall_JF"* y ubicada en la misma tabla.
+
+```{=tex}
+\begin{equation}
+{Fallecidos}_j=\sum_{x=18}^{110}{MueJ}_{x,j}
+\end{equation}
+```
+![Tabla resumen de jubilados](images/F/Img27.png){fig-align="center"}
+
+### Proyección de Pensiones
+
+Esta tabla llamada *"Tpenjub_F"* contiene la proyección del monto por pensiones que se le otorga a un jubilado. Para ello se hace uso de la siguiente formula, la cual establece una igualdad con la fórmula 5.3.3 Pensión por vejez que se encuentra en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020):
+
+\begin{align}
+{Pen\_vJ}_{x,j} & = \nonumber \\ 
+& \hspace{2 em}{Pen\_vJ}_{x-1,j-1} \times \left ( 1+trev\_pen_j \right ) \times {CanJ}_{x-1,j-1} \times \left ( 1-{qj}_{x-1} \right ) \nonumber \\
+& \underline{ \hspace{1.2 em} +  { Pen\_v}_{x,j}\times{Can}_{x-1,j-1}\times{pja\_{dm}}_{x-1}+{Pen\_vs}_{x,j}\times{jub\_sus}_{x,j} \hspace{2 em}} \nonumber \\
+&\hspace{1 em}{CanJ}_{x-1,j-1}\times\left(1-{qj}_{x-1}\right)+{Can}_{x-1,j-1}\times{pja\_{dm}}_{x-1}+{jub\_sus}_{x,j} 
+\end{align} Donde:
+
+${Pen\_vJ}_{x,j}$ = monto calculado de pensión para jubilados de edad *x* en el año *j*.\
+${trev\_{pen}}_j$ = tasa de revalorización de pensiones por año proyectado.\
+${CanJ}_{x-1,j-1}$ = cantidad de afiliados jubilados de edad *x-1* en el año anterior.\
+$Can_{x-1,j-1}$ = cantidad de afiliados activos de edad *x-1* en el año anterior.\
+${Pen\_vs}_{x,j}$ = monto calculado de pensión por vejez de afiliados en suspenso\
+${Pen\_v}_{x,j}$ = monto calculado de pensión al fallecimiento de activos, para la base de la pensión por viudez.\
+${jub\_sus}_{x,j}$ = cantidad de afiliados en suspenso de edad *x* en el año *j*.
+
+![Proyección del Monto calculado de pensión para jubilados](images/F/Img28.png){fig-align="center"}
+
+### Resumen de Proyección de datos
+
+Aquí se establece un resumen de las contribuciones y ayudas que reciben los afiliados jubilados de género femenino, a esta tabla se le ha llamado *"Tresum_JF"*. Para ello vemos a detalle cada uno de los parámetros involucrados en dicha tabla
+
+-   $[Pensión\ promedio]$ este parámetro contiene el promedio de las pensiones para jubilados, para dicho cálculo se hace uso de la fórmula 5.3.1 Pensión promedio para jubilados que se encuentra en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020)
+
+```{=tex}
+\begin{equation}
+{PensPromJ}_{x,j}= \frac{\sum{CanJ_{x,j}\times Pen{\_vJ}_{x,j}}}{\sum{CanJ_{x,j}}}
+\end{equation}
+```
+Donde:
+
+${PensPromJ}_{x,j}$ = pensión promedio para jubilados de edad *x* en el año *j*.\
+$CanJ_{x,j}$ = cantidad de afiliados jubilados de edad *x* en el año *j*.\
+$Pen{\_vJ}_{x,j}$ = pensión que se le otorga a un jubilado de edad *x* en el año *j*.
+
+-   $[Beneficio\ pensiones]$ este parámetro contiene el total de beneficios por pensiones para jubilados, fórmula similar a la fórmula 5.3.4 Pago total de pensiones por jubilación al año, que se encuentra en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020)
+
+\begin{equation}
+{PenJT}_j={num\_pension}_j\times\sum{{Pen\_vJ}_{x,j}\times {CanJ}_{x,j}}
+\label{eq:penjt}
+\end{equation} Donde:
+
+$CanJ_{x,j}$ = cantidad de afiliados jubilados a la edad *x* en el año *j*.\
+$Pen{\_vJ}_{x,j}$ = pensión que se le otorga a un jubilado a la edad *x* en el año *j*.\
+${num\_pension}_j$ = número de pensiones en el año *j*.
+
+-   $[Aporte\ de\ salud]$ determina el total de aportes por salud proyectada por año y para ello se hace uso de la siguiente formula:
+
+```{=tex}
+\begin{equation}
+{Apor\_salud}_j={num\_contri}_j\times{por\_salud}_j\times\ \sum{{Pen\_vJ}_{x,j}\times{CanJ}_{x,j}}
+\end{equation}
+```
+-   $[Ayuda\ Fúnebre]$ este parámetro representa la cantidad que se les dará a los familiares de los derecho-habientes jubilados, pensionados o fallecidos para gastos fúnebres, aquí se realiza un cálculo total por año proyectado, para ello se aplica la siguiente formula:
+
+```{=tex}
+\begin{equation}
+AFunebr{eJ}_j=\ AFunbr{eJ}_{j-1}\times(1+{tcrece\_afunebre}_j)
+\end{equation}
+```
+Donde:
+
+$AFunbr{eJ}_j$ = ayuda que se otorga en el año *j*.\
+$AFunbr{eJ}_{j-1}$ = ayuda que se otorga en el año anterior.\
+$tcrece\_afunebre$ = tasa de incremento del salario de referencia para otorgar beneficio de ayuda por sepelio.
+
+-   $[Tot.\ Ben.\ A.\ F.]$ Total de beneficios por ayuda fúnebre, este parámetro representa la cantidad total de beneficios que se conceden por ayuda fúnebre por toda la cantidad de fallecidos para el año proyectado.
+
+```{=tex}
+\begin{equation}
+Tot.Ben.A.f_j = AyudaFunebre_j\times{Fallecidos}_j
+\end{equation}
+```
+![Resumen de datos para Jubilados](images/F/Img29.png){fig-align="center"}
+
+### Proyección de viudos
+
+A esta tabla se le llama *"Tnviudez_JFM"* aquí se estima la proyección de viudos por la muerte de un jubilado, también se toma en cuenta la probabilidad de fallecer para una jubilada y la probabilidad de estar casada,
+
+```{=tex}
+\begin{equation}
+{CanV\_J}_{j,x}={qj}_{x-1}\times pcas_{x-1}\times{CanJ}_{j-1,x-1-5}
+\end{equation}
+```
+Donde:
+
+$Can{V\_J}_{j,x}$ = cantidad de viudeces por la muerte de un jubilado de edad *x* en el año *j*.\
+${qj}_{x-1}$ = probabilidad de que un jubilado fallezca a la edad *x-1*.\
+$pcas_{x-1}$ = probabilidad de que un afiliado este casado a la edad *x-1*.\
+${CanJ}_{x-1-5,j-1}$ = cantidad de afiliados jubilados de edad *x-1* en el año anterior.
+
+![Cantidad de viudos por la muerte de un jubilado](images/F/Img30.png){fig-align="center"}
+
+### Proyección del producto de monto pensión por número de pensiones nuevas de viudez, para la base de cálculo de la pensión promedio de viudez
+
+A esta tabla se le ha llamado *"Tnew_penxnum_JFM"*, aquí se determina el monto total para las pensiones por viudeces a la muerte de un jubilado femenino, estos parámetros son el resultado de la multiplicación del monto de pensión proyectado para la jubilada ubicados en la tabla *"Tpenjub_F"* y el número de viudos proyectados ubicados en la tabla *"Tnviudez_JFM"*.
+
+```{=tex}
+\begin{equation}
+{TPen\_vJ}_{x,j}={Pen\_vJ}_{x,j}\times{CanV\_J}_{x,j}
+\end{equation}
+```
+Donde:
+
+${TPen\_vJ}_{x,j}$= Monto Total de pensión al fallecimiento de un jubilado de edad *x* en el año *j*.\
+${Pen\_vJ}_{x,j}$= Monto de pensión al fallecimiento de un jubilado de edad *x* en el año *j*.\
+$Can{V\_J}_{x,j}$ = Cantidad de viudos al fallecimiento de un jubilado de edad *x* en el año *j*.
+
+![Monto total para las pensiones por viudeces a la muerte de un jubilado](images/F/Img31.png){fig-align="center"}
+
+### Proyección fallecidos activos
+
+a esta tabla se le ha llamado *"Tfall_JF"*, aquí se establece la cantidad de jubilados que fallecen, estos parámetros se determinan haciendo el producto de la probabilidad de fallecer para un jubilado y la cantidad de personas proyectadas por edad *x* y por año *j* ubicados en la tabla *"Tjub_F"*. Para ello se hace uso de la siguiente formula, la cual establece una igualdad con la fórmula 5.3.5 Cantidad de jubilados que fallecen en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020):
+
+```{=tex}
+\begin{equation}
+MueJ_{x,j}=CanJ_{x-1,j-1}\times{qj}_{x-1}
+\end{equation}
+```
+Donde:
+
+$MueJ_{x,j}$ = cantidad de jubilados que fallecen a la edad *x* en el año *j*.\
+$CanJ_{x-1,j-1}$ = cantidad de afiliados jubilados de edad *x-1* en el año anterior.\
+${qj}_{x-1}$ = probabilidad de que un jubilado fallezca a la edad *x-1*.
+
+![Cantidad de jubilados que fallecen](images/F/Img32.png){fig-align="center"}
+
+### Proyección de fallecidos por el monto de pensión
+
+A esta tabla se le ha llamado *"Tpenfall_JF"* Este parámetro determina la cantidad de pensión proyectada para un jubilado fallecido, se obtiene multiplicando la probabilidad de fallecer por el monto calculado de pensiones al fallecimiento de un jubilado en la tabla *"Tpenjub_F"* y la cantidad de activos proyectados para el año anterior ubicado en la tabla *"Tjub_F"*.
+
+```{=tex}
+\begin{equation}
+{TMueJ}_{x,j}={qj}_{x-1}\times{Pen\_vJ}_{x,j}\times{CanJ}_{x-1+d,j-1}
+\end{equation}
+```
+Donde:
+
+${TMueJ}_{j,x}$ = cantidad total montos de pensiones por fallecimiento de jubilado de edad *x* en el año *j*.\
+${qj}_{x-1}$ = probabilidad de que un jubilado fallezca a la edad *x-1*.\
+$Ca{nJ}_{j-1,x-1+d}$ = cantidad de afiliados jubilados proyectada de edad de *x-1+d* años para el año anterior, *d = 0* en caso femenino y *d = 5* en caso masculino.\
+${Pen\_vJ}_{x,j}$ = monto de pensión al fallecimiento de un jubilado de edad *x* en el año *j*.
+
+![cantidad de pensión proyectada para un jubilado fallecido](images/F/Img33.png){fig-align="center"}
+
+**NOTA**: Todos los parámetros y tablas antes descritas siguen el mismo patrón y proceso para el caso masculino, habiendo ligeros cambios en los nombres siendo este cambio por la inicial del género (*M*).

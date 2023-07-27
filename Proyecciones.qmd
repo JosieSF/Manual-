@@ -1,0 +1,15 @@
+# Proyecciones por Tipo de Beneficio
+
+En esta sección se desarrollan las hojas que contemplan la proyección del costo por tipo de beneficio y tipo de afiliado en base a la información del año de estudio y con ello se proyecta a cien años, más el comportamiento de las obligaciones que se deben cubrir con el fondo. Se desglosan las seis hojas las cuales corresponden a afiliados activos, afiliados en suspenso, jubilados, invalidez, viudez y orfandad por género. En forma general estas hojas contienen especificaciones que categorizan a estos grupos para analizarlos adecuadamente y estimar proyección de nuevos ingresantes, variación en el salario o beneficios, nuevas pensiones o decesos. Dichos resultados son concatenados en la hoja de proyección de flujos donde se determinan como gastos por pago de beneficios. A continuación veremos a detalle cada una de ellas y los procesos que se implementan.
+
+Tipos de beneficios:
+
+- Activos
+- Suspenso
+- Jubilados
+- Inválidos
+- Viudez
+- Orfandad
+
+
+

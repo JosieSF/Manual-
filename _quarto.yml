@@ -1,0 +1,36 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Estructura y Manual de Usuario de la Proyección de Flujo de Efectivo"
+  author: "Unidad de Actuaria IHSS"
+  date: "2023-07-25"
+  chapters:
+    - index.qmd
+    - ParametrosGenerales.qmd
+    - condicionesIniciales.qmd
+    - TablasBiometricas.qmd
+    - Escenarios.qmd
+    - Proyecciones.qmd
+    - Activos.qmd
+    - Suspenso.qmd
+    - Jubilados.qmd
+    - Invalidos.qmd
+    - Viudez.qmd
+    - Orfandad.qmd
+    - Resultados.qmd
+    - Supuestos.qmd
+    - references.qmd
+    
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: journal
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
