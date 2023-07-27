@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Estructura y Manual de Usuario de la Proyección de Flujo de Efectivo - 4&nbsp; Tablas Biométricas</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Escenarios.html" rel="next">
+<link href="./condicionesIniciales.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./TablasBiometricas.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tablas Biométricas</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estructura y Manual de Usuario de la Proyección de Flujo de Efectivo</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ParametrosGenerales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Parámetros Generales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./condicionesIniciales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Condiciones Iniciales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TablasBiometricas.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tablas Biométricas</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Escenarios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Escenarios</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Proyecciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Proyecciones por Tipo de Beneficio</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Activos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Activos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Suspenso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Suspenso</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Jubilados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Jubilados</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Invalidos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Inválidos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Viudez.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Viudez</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Orfandad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Orfandad</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Resultados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Resultados de Proyecciones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Supuestos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Supuestos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#tablas" id="toc-tablas" class="nav-link active" data-scroll-target="#tablas"><span class="header-section-number">4.1</span> [Tablas]</a>
+  <ul class="collapse">
+  <li><a href="#mortalidad" id="toc-mortalidad" class="nav-link" data-scroll-target="#mortalidad"><span class="header-section-number">4.1.1</span> Mortalidad</a></li>
+  <li><a href="#salida" id="toc-salida" class="nav-link" data-scroll-target="#salida"><span class="header-section-number">4.1.2</span> Salida</a></li>
+  <li><a href="#estado-civil" id="toc-estado-civil" class="nav-link" data-scroll-target="#estado-civil"><span class="header-section-number">4.1.3</span> Estado Civil</a></li>
+  <li><a href="#decrementos-múltiples" id="toc-decrementos-múltiples" class="nav-link" data-scroll-target="#decrementos-múltiples"><span class="header-section-number">4.1.4</span> Decrementos Múltiples</a></li>
+  <li><a href="#probabilidades-de-tener-hijos-de-cada-edad-hasta-los-18-años" id="toc-probabilidades-de-tener-hijos-de-cada-edad-hasta-los-18-años" class="nav-link" data-scroll-target="#probabilidades-de-tener-hijos-de-cada-edad-hasta-los-18-años"><span class="header-section-number">4.1.5</span> Probabilidades de Tener Hijos de Cada Edad Hasta los 18 Años</a></li>
+  <li><a href="#tasas-de-mortalidad-y-probabilidades-por-efecto-covid-19" id="toc-tasas-de-mortalidad-y-probabilidades-por-efecto-covid-19" class="nav-link" data-scroll-target="#tasas-de-mortalidad-y-probabilidades-por-efecto-covid-19"><span class="header-section-number">4.1.6</span> Tasas de Mortalidad y Probabilidades por Efecto COVID-19</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tablas Biométricas</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="tablas" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="tablas"><span class="header-section-number">4.1</span> [Tablas]</h2>
+<p>En esta sección nos encontramos con las distribuciones de probabilidad según el estado del afiliado (Activo, Jubilado, Invalidez, Retiro, Ingreso, Casado) por edad, a esta tabla se le ha llamado <em>“Tbiometrica”</em>, también incluimos dentro de esta, la sección de decrementos múltiples y para este estudio en particular de 2022 se tomaron en cuenta las probabilidades y tasas de mortalidad por efecto del SARS-Cov-19 (Enfermedad por Coronavirus). Las probabilidades según el estado del afiliado son extraídas conforme a lo indicado en la Circular <em>SPV No.&nbsp;11/2017</em>, Memorando <em>UNYS No.&nbsp;1166-2017</em>, sobre el uso de Tablas Biométricas:</p>
+<ul>
+<li>Tabla de participantes activos</li>
+<li>Tabla de jubilación estimada de los datos históricos del IHSS</li>
+<li>Tabla de ingresos estimada de los datos históricos del IHSS</li>
+<li>Mortalidad: 1980 Commissioners Standar Ordinary (CSO) – Formerly Table K (F). Base: Age Nearest Birthday.</li>
+<li>Invalidez: 1968-72 Total and Permanent Disability (50% basis) Table – Base: Age: Nearest Birthday</li>
+<li>Rotación y despido: Tabla de mortalidad JONHIG</li>
+<li>Tablas para pensionados</li>
+<li>Mortalidad jubilados: Tabla de Mortalidad de Rentistas, Instituto de Seguros Sociales (TCMR ISS) 1980-1989</li>
+<li>Mortalidad para inválidos: Tabla de mortalidad de inválidos, Superintendencia Bancaria de Colombia, Resolución 0585 de 1994</li>
+<li>Tablas de probabilidad que un afiliado este casado corresponde al valor promedio del comportamiento histórico de los datos del IHSS.</li>
+</ul>
+<section id="mortalidad" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="mortalidad"><span class="header-section-number">4.1.1</span> Mortalidad</h3>
+<p>Estos bloques de información son las de mayor interés dentro del análisis ya que nos permite estudiar los fallecimientos por sexo y edad.</p>
+<ul>
+<li>[<em>qa_X</em>] probabilidad de que un activo de género <em>X</em> fallezca.</li>
+<li>[<em>qi_X</em>] probabilidad de que un inválido de género <em>X</em> fallezca.</li>
+<li>[<em>qj_X</em>] probabilidad de que un jubilado de género <em>X</em> fallezca.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img3.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Probabilidades de mortalidad</figcaption>
+</figure>
+</div>
+</section>
+<section id="salida" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="salida"><span class="header-section-number">4.1.2</span> Salida</h3>
+<p>En esta sección se incluyen las probabilidades de dejar de formar parte de los cotizantes activos ya sea por retiro, jubilación o invalidez.</p>
+<ul>
+<li>[<em>ra_X</em>] probabilidad que un activo de género <em>X</em> se retire.</li>
+<li>[<em>pja_X</em>] probabilidad que un activo de género <em>X</em> se jubile.</li>
+<li>[<em>ia_X</em>] probabilidad que un activo de género <em>X</em> se invalide.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img4.png" class="img-fluid figure-img" width="543"></p>
+<figcaption class="figure-caption">Probabilidades de salidas del sistema</figcaption>
+</figure>
+</div>
+<p>En esta sección se toman en cuenta las probabilidades que tiene un afiliado de ingresar al sistema</p>
+<ul>
+<li>[<em>ping_X</em>] probabilidad que un afiliado de género <em>X</em> ingrese al sistema.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img5.png" class="img-fluid figure-img" width="399"></p>
+<figcaption class="figure-caption">Probabilidades de ingreso al sistema</figcaption>
+</figure>
+</div>
+</section>
+<section id="estado-civil" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="estado-civil"><span class="header-section-number">4.1.3</span> Estado Civil</h3>
+<p>Aquí se consideran las probabilidades que un afiliado este casado o casada, esta distribución será la misma para ambos sexos y para todas las edades.</p>
+<ul>
+<li>[<em>pcas_X</em>] probabilidad de que un afiliado de género <em>X</em> este casado.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img6.png" class="img-fluid figure-img" width="178"></p>
+<figcaption class="figure-caption">Probabilidades de estar casado</figcaption>
+</figure>
+</div>
+</section>
+<section id="decrementos-múltiples" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="decrementos-múltiples"><span class="header-section-number">4.1.4</span> Decrementos Múltiples</h3>
+<p>Aquí se toman en cuenta las probabilidades de que un afiliado abandone el sistema por una única causa (Muerte, Vejez, Invalides, Retiro), para ello se hace uso de la fórmula 2.1 para estimar probabilidades de los decrementos múltiples que se encuentra en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020):</p>
+<span class="math display">\[\begin{align} q_x^{(k)} &amp;= q_x^{\prime(k)} \left( 1-\frac{\sum_{i=1,i\neq k}^{4}q_x^{\prime(i)}}{2} + \frac{q_x^{\prime(k+1)}\times q_x^{\prime(k+2)}+\left(q_x^{\prime(k+1)}+q_x^{\prime(k+2)}\right)\times q_x^{\prime(2+3)}}{3}\right.\nonumber  \\ &amp;\qquad \left.\vphantom{\int_t} -\frac{\prod_{i=1,i\neq k}^{4}q_x^{\prime(i)}}{4} \right) \end{align}\]</span>
+<p>Donde:</p>
+<p><span class="math inline">\(q_x^{(i)}\)</span>: probabilidad de salir del grupo por la causa <em>i</em> para una persona de edad <em>x</em>.<br>
+<span class="math inline">\(q_x^{\prime(i)}\)</span>: probabilidad individual de salir de un grupo por la causa <em>i</em> para una persona de edad <em>x</em>.<br>
+<span class="math inline">\(i\)</span>: causa de salida, <span class="math inline">\(i=1,2,3,4...\)</span></p>
+<p>Nota: entiéndase la notación siguiente como <span class="math inline">\((i+x)=modulo(i+x,4)\)</span></p>
+<p>[<em>qa_dm_X</em>] probabilidades de decremento múltiple de que un activo de género <em>X</em> fallezca.<br>
+[<em>ia_dm_X</em>] probabilidad de decremento múltiple de que un activo de género <em>X</em> se invalide.<br>
+[<em>pja_dm_X</em>] probabilidad de decremento múltiple de que un activo de género <em>X</em> se jubile.<br>
+[<em>ra_dm_F</em>] probabilidad de decremento múltiple de que un activo de género <em>X</em> se retire.</p>
+<p>A continuación se muestra un ejemplo de decrementos múltiples para el caso de la mortalidad para cotizantes activos de sexo femenino:</p>
+<p><span class="math display">\[=[@[qa_F]]*(1-SUMA(Tbiometrica[@[ia_F]:[ra_f]])/2+\]</span> <span class="math display">\[([@[ia_F]]*[@[pja_F]]+([@[ia_F]]+[@[pja_F]])*[@[ra_f]])/3\]</span> <span class="math display">\[-PRODUCTO(Tbiometrica[@[ia_F]:[ra_f]])/4)]\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img7.jpg" class="img-fluid figure-img" width="627"></p>
+<figcaption class="figure-caption">Ejemplo en tabla de decrementos multiples</figcaption>
+</figure>
+</div>
+</section>
+<section id="probabilidades-de-tener-hijos-de-cada-edad-hasta-los-18-años" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="probabilidades-de-tener-hijos-de-cada-edad-hasta-los-18-años"><span class="header-section-number">4.1.5</span> Probabilidades de Tener Hijos de Cada Edad Hasta los 18 Años</h3>
+<ul>
+<li><strong>Afiliados Activos</strong>: esta tabla contiene las probabilidades de tener hijos de las distintas edades para afiliados activos de edad <em>x</em>, a esta tabla se le ha llamado <em>“Tphijos_A”</em></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img8.jpg" class="img-fluid figure-img" width="630"></p>
+<figcaption class="figure-caption">Probabilidad de que un activo tenga hijos</figcaption>
+</figure>
+</div>
+<ul>
+<li><p><strong>Jubilados</strong>: esta tabla contiene las probabilidades de tener hijos de las distintas edades por edad de jubilados, a esta tabla se le ha llamado <em>“Tphijos_J”</em>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img9.png" class="img-fluid figure-img" width="700"></p>
+<figcaption class="figure-caption">Probabilidad que un jubilado tenga hijos</figcaption>
+</figure>
+</div></li>
+<li><p><strong>Invalidez</strong>: esta tabla contiene las probabilidades de tener hijos de las distintas edades por edad de afiliados inválidos, a esta tabla se le ha llamado <em>“Tphijos_I”</em>.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img10.png" class="img-fluid figure-img" width="630"></p>
+<figcaption class="figure-caption">Probabilidad de que un invalido tenga hijos</figcaption>
+</figure>
+</div>
+</section>
+<section id="tasas-de-mortalidad-y-probabilidades-por-efecto-covid-19" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" class="anchored" data-anchor-id="tasas-de-mortalidad-y-probabilidades-por-efecto-covid-19"><span class="header-section-number">4.1.6</span> Tasas de Mortalidad y Probabilidades por Efecto COVID-19</h3>
+<p>Para el Estudio Actuarial con cifras a Diciembre de 2020 se consideraron los efectos en las tasas de mortalidad y sus respectivas probabilidades a causa de la pandemia por COVID-19. En la tabla de tasas de mortalidad por COVID se incluyen valores como el rango de edad de las personas, el número de fallecidos para cada uno de los rangos de edad, el número de contagios, los contagios que se esperan alcanzar y las respectivas tasas de mortalidad</p>
+<ul>
+<li>La columna <span class="math inline">\('DW'\)</span> llamada [<em>Contag-Expand</em>], lo que realiza es un producto con cada fila de la columna <span class="math inline">\('DV'\)</span> llamada [<em>Contagios</em>] y el [<em>factor_exp</em>] cuyo valor constante es <em>38</em>.</li>
+</ul>
+<p><span class="math display">\[[DW_i={DV}_i \ast factor\_exp]\]</span> Donde <em>i</em> es la fila del archivo en Excel.</p>
+<ul>
+<li>La columna <span class="math inline">\('DX'\)</span> llamada [<em>tasas_de_mortalidad</em>] se determina realizando el cociente de cada uno de los valores de la columna <span class="math inline">\('DU'\)</span> llamada [<em>fallecidos</em>] y [<em>Contg_Expand</em>].</li>
+</ul>
+<p><span class="math display">\[[DX_i={DU}_i/{DW}_i]\]</span></p>
+<ul>
+<li>La columna <span class="math inline">\('DY'\)</span> llamada [<em>suavizados</em>] se estima realizando un promedio del valor anterior y el siguiente de la [<em>tasas_de_mortalidad</em>] a excepción del primer y último valor que se coloca el mismo valor.</li>
+</ul>
+<p><span class="math display">\[DY_i=PROMEDIO({DX}_{i-1}:{DX}_{i+1})\]</span></p>
+<ul>
+<li>La columna <span class="math inline">\('DQ'\)</span> llamada [<em>q_adicional</em>] es el factor adicional que se establecerá a las tablas de mortalidad recargadas por COVID-19, este se estima haciendo uso de la siguiente formula:</li>
+</ul>
+<p><span class="math display">\[DQ_i=INDICE(\$DY\$6:\$DY\$27,COINCIDIR(Tcovid[@Edad]-1,\]</span> <span class="math display">\[\$DT\$6:\$DT\$27,1)+1,1)*\$DQ\$4\]</span></p>
+<p>**<em>INDICE</em> esta se encarga de devolver el valor de una celda dentro de la columna [<em>suavizados</em>] en la posición de la fila y/o la columna que ocupa dentro de ella.</p>
+<p>**<em>COINCIDIR</em> busca la edad de los afiliados en el intervalo de celdas llamado [Hasta] y después devuelve la posición relativa de dicho elemento en el rango.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img11.png" class="img-fluid figure-img" width="722"></p>
+<figcaption class="figure-caption">Tasas de mortalidad por COVID</figcaption>
+</figure>
+</div>
+<p><strong>NOTA</strong>: esta sección fue tomada para el análisis del Estudio Actuarial con cifras a diciembre 2020 por la pandemia COVID-19, en otros estudios estos valores no son tomados en cuenta.</p>
+<p>A la tabla de probabilidades recargadas por COVID-19 se le ha llamado <em>“Tcovid”</em> y este valor resulta de la suma de las tablas biométricas de mortalidad ([<em>qa</em>], [<em>qi</em>] y [<em>qj</em>]) <em>“Tbiometrica”</em> más el valor calculado en la tabla de tasas de mortalidad por COVID-19 llamada [<em>q_adicional</em>].</p>
+<p><span class="math display">\[=Tbiometrica[@[q]]+DQ_i]\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img12.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Probabilidades recargadas por efecto COVID</figcaption>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./condicionesIniciales.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Condiciones Iniciales</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Escenarios.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Escenarios</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

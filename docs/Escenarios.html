@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Estructura y Manual de Usuario de la Proyección de Flujo de Efectivo - 5&nbsp; Escenarios</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Proyecciones.html" rel="next">
+<link href="./TablasBiometricas.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Escenarios.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Escenarios</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estructura y Manual de Usuario de la Proyección de Flujo de Efectivo</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ParametrosGenerales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Parámetros Generales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./condicionesIniciales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Condiciones Iniciales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./TablasBiometricas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tablas Biométricas</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Escenarios.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Escenarios</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Proyecciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Proyecciones por Tipo de Beneficio</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Activos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Activos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Suspenso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Suspenso</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Jubilados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Jubilados</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Invalidos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Inválidos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Viudez.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Viudez</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Orfandad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Orfandad</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Resultados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Resultados de Proyecciones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Supuestos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Supuestos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#creación-de-escenarios-creación-escenarios" id="toc-creación-de-escenarios-creación-escenarios" class="nav-link active" data-scroll-target="#creación-de-escenarios-creación-escenarios"><span class="header-section-number">5.1</span> Creación de Escenarios [Creación Escenarios]</a>
+  <ul class="collapse">
+  <li><a href="#tabla-de-escenarios" id="toc-tabla-de-escenarios" class="nav-link" data-scroll-target="#tabla-de-escenarios"><span class="header-section-number">5.1.1</span> Tabla de Escenarios</a></li>
+  <li><a href="#tabla-de-valores-supuestos-para-cada-escenario" id="toc-tabla-de-valores-supuestos-para-cada-escenario" class="nav-link" data-scroll-target="#tabla-de-valores-supuestos-para-cada-escenario"><span class="header-section-number">5.1.2</span> Tabla de Valores Supuestos Para Cada Escenario</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Escenarios</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="creación-de-escenarios-creación-escenarios" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="creación-de-escenarios-creación-escenarios"><span class="header-section-number">5.1</span> Creación de Escenarios [Creación Escenarios]</h2>
+<p>En esta sección se establece el conjunto de tablas que permiten modelar y establecer parámetros que simulan distintos tópicos dentro del régimen, estableciendo hipótesis o cambiando valores dependiendo del tipo de escenario que se desee plantear. Estas tablas interactúan entre sí con cada uno de los escenarios que se planteen y este se divide en dos tablas: la tabla de escenarios y la tabla de valores de supuestos por cada escenario.</p>
+<section id="tabla-de-escenarios" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="tabla-de-escenarios"><span class="header-section-number">5.1.1</span> Tabla de Escenarios</h3>
+<p>Los campos establecidos en esta tabla nos permiten agrupar los datos posteriores en el tipo de escenario establecido, a esta tabla se le llama <em>“Tescenarios”</em>.</p>
+<ul>
+<li><p>[<em>No.</em>] <strong>Numero de Escenario</strong>, se va generando mediante una secuencia y diferente en cada caso.</p></li>
+<li><p>[<em>Escenario</em>] <strong>tipo de escenario</strong>, escenario que se proyectará a esta tabla se le ha llamado <em>“Lescenarios”</em></p></li>
+<li><p>[<em>desc_escena</em>] <strong>Descripción de Escenario</strong>, en este espacio agregamos una descripción relevante del tipo de escenario.</p></li>
+<li><p>[<em>prim_pto_c</em>] <strong>Primer Punto Crítico</strong>, año en el cual los ingresos corrientes que recibe el RSPS no son suficientes para cubrir los gastos y en este caso se recurre a los ingresos financieros.</p></li>
+<li><p>[<em>seg_pto_c</em>] <strong>Segundo Punto Crítico</strong>, este es el año en que el total de los ingresos que recibe el RSPS no son suficientes para cubrir el gasto total del régimen y es necesario tomar recursos del patrimonio.</p></li>
+<li><p>[<em>ter_pto_c</em>] <strong>Tercer Punto Crítico</strong>, año en que se ha consumido todo el patrimonio y ya no existen recursos para cubrir el déficit de ingresos para obtener el gasto total.</p></li>
+<li><p>[<em>num_proy</em>] registra el Conteo de veces que esta un escenario en el almacén de proyecciones</p></li>
+<li><p>Las celdas [<em>Desde</em>] y [<em>Hasta</em>] aquí establece el valor mínimo y máximo del número de escenarios que se han creado, esto servirá posteriormente para crear la proyección.</p></li>
+<li><p>[<em>Agregar_Escenario</em>] este botón nos permite iniciar el proceso de proyección de flujos.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/F/Img13.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Tabla de creación de escenarios</figcaption>
+</figure>
+</div>
+</section>
+<section id="tabla-de-valores-supuestos-para-cada-escenario" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="tabla-de-valores-supuestos-para-cada-escenario"><span class="header-section-number">5.1.2</span> Tabla de Valores Supuestos Para Cada Escenario</h3>
+<p>En cada uno de los campos de esta sección se incluyen una gran variedad de parámetros, se le ha llamado a esta tabla “Tesena_supues” estos valores van a depender de la información de diversas fuentes como ser datos estadísticos y en su mayoría de la Ley del Seguro Social y sus Reglamentos. Estos valores a su vez van a cambiar con el tipo de escenario y supuesto que se establezca, eso lo veremos a detalle a continuación.</p>
+<p><strong>Escenarios que se establecieron</strong>:</p>
+<ul>
+<li><p>Base (Con suspenso y sin suspenso)</p></li>
+<li><p>Pesimista</p></li>
+<li><p>Optimista</p></li>
+<li><p>Incremento de la tasa de contribución</p></li>
+<li><p>Control de beneficios</p></li>
+<li><p>Incremento de la tasa total de contribución y la de rendimiento efectiva</p></li>
+<li><p>Revalorización de pensiones.</p></li>
+</ul>
+<p>Los escenarios antes mencionados son definidos para este estudio en particular pero estos pueden variar considerando otros factores ya sea por reformas de ley, comportamiento de los datos, por decisión de los miembros del Comité de Asuntos Actuariales entre otros, es por ello que esta sección es flexible a cambios.</p>
+<ul>
+<li><p>[<em>act_pob_abierta</em>] <strong>Proyección de población</strong>, esta puede ser abierta y se establece el valor de 1 o cerrada y se define dicho valor como 0. (Para este estudio se tomarón en todos los escenarios como población abierta)</p></li>
+<li><p>[<em>por_crece_pob</em>] <strong>Porcentaje de crecimiento de la población de afiliados</strong>, es un dato de tipo demográfico y estadístico este índice se emplea con el fin de establecer cómo será el incremento de la población de afiliados del Regimen a lo largo de los años y en base a cada escenario planteado inicialmente.</p></li>
+<li><p>[<em>ttecnica_real</em>] <strong>Tasa Técnica Real</strong>, es la Tasa de rentabilidad ajustada al efecto inflacionario, este valor depende de otros parámetros como ser la tasa de rendimiento efectiva [<span class="math inline">\(trend\_{efect}\)</span>] y la tasa de inflación [<span class="math inline">\(tinf\_{real}\)</span>]. Para ello se hace uso de la siguiente formula.</p></li>
+</ul>
+<span class="math display">\[\begin{equation}
+ttecnica\_{real}=\frac{1+\ trend\_{efect}}{1+ tinf\_{real}}-1
+\label{eq:ttreal}
+\end{equation}\]</span>
+<ul>
+<li><p>[<em>trev_pen</em>] <strong>Tasa de revalorización de pensiones</strong>, este factor depende en su totalidad de la tasa de inflación, es por ello que colocamos el mismo valor en ambos campos.</p></li>
+<li><p>[<em>trev_efect</em>] Tasa de rendimiento de las inversiones del fondo o la <strong>Tasa de rendimiento efectiva</strong> es un parámetro estadístico y nos permite ver el beneficio que se obtendrá por mantener dinero en un producto financiero o el rendimiento de una inversión a lo largo de los años proyectados y dependiendo del escenario que se plantee.</p></li>
+<li><p>[<em>tincre_salarial</em>] <strong>Tasa de incremento de los salarios sujetos de contribución</strong>, este es un dato estadístico en el cual se analiza la opción a realizar un aumento en los salarios por contribuciones de un afiliado, este factor esta relacionado con la inflación</p></li>
+<li><p>[<em>ttot_contri</em>] <strong>Tasa total de contribución</strong>, este parámetro es un elemento que se establece en el <a href="https://honduras.eregulations.org/media/ley_del_seguro_social.pdf">Articulo 55-A</a> de la ley del Seguro Social el cual hace mención de que la tasa de cotización será de dos por ciento (<span class="math inline">\(2\%\)</span>) para el empleador y del uno por ciento (<span class="math inline">\(1\%\)</span>) para el trabajador afiliado, teniendo una tasa total de tres por ciento (<span class="math inline">\(3\%\)</span>).</p></li>
+<li><p>[<em>por_ga</em>] <strong>Porcentaje de gastos administrativos</strong> en relación al ingreso por contribuciones, este es un parámetro estadístico el cual representa el ajuste a todo lo relacionado con los egresos necesarios para el funcionamiento optimo del regimen. se mantiene en un ocho por ciento (<span class="math inline">\(8\%\)</span>) en la mayor parte de los escenarios, excepto en aquel escenario que se busca un incremento en la tasa de contribución, ya que este parámetro es inversamente proporcional al porcentaje de gastos. Esta dado por la siguiente formula:</p></li>
+</ul>
+<span class="math display">\[\begin{equation}
+por\_{ga}=\frac{0.03\times 0.08}{ttot\_{contri}}
+\label{eq:porga}
+\end{equation}\]</span>
+<ul>
+<li><p>[<em>num_contri</em>] <strong>Numero de contribuciones al año</strong>, según el reglamento del IHSS es de 12 contribuciones por año.</p></li>
+<li><p>[<em>por_salud</em>] <strong>Porcentaje Aporte Salud</strong> para pensionados por Invalidez y vejez, este es un factor que se establece en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Articulo 112</a> del reglamento para la atención medica de los jubilados y pensionados el cual es de diez punto cinco por ciento (<span class="math inline">\(10.5\%\)</span>).</p></li>
+<li><p>[<em>num_pension</em>] <strong>número de pensiones por año</strong>, se establece un total de 14 pensiones.</p></li>
+<li><p>[<em>dif_edad_matri</em>] <strong>Diferencia de edades entre hombres y mujeres casados</strong>, este es un dato de tipo estadístico el cual se establece en 5 años.</p></li>
+<li><p>[<em>tremp_viudez</em>] <strong>Tasa remplazo pensiones viudez</strong>, es un beneficio establecido en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 124</a> del Reglamento General de la ley del Seguro Social el cual se establece en <span class="math inline">\(40\%\)</span></p></li>
+<li><p>[<em>tremp_orfa</em>] <strong>Porcentaje de transferencia de pensión a cada huérfano</strong>. Este beneficio se establece en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 127</a> del reglamento del IHSS, el cual se establece en <span class="math inline">\(20\%\)</span>.</p></li>
+<li><p>[<em>tremp_ascend</em>] <strong>Tasa remplazo pensiones por ascendencia</strong>, este beneficio se establece en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 130</a> del Reglamento General de la ley del Seguro Social, el cual se establece en <span class="math inline">\(20\%\)</span>.</p></li>
+<li><p>[<em>tmin_jubila</em>]Tiempo mínimo de cotización para jubilarse el cual corresponde a 15 años.</p></li>
+<li><p>[<em>ej_min</em>] <strong>Edad Mínima de Jubilación</strong>, estos valores están establecidos en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 116</a> del Reglamento General de la ley del Seguro Social los cuales se establecen como 60 años para mujeres y 65 para Hombres.</p></li>
+<li><p>[<em>por_min_jubila</em>] <strong>Porcentaje mínimo de transferencia</strong> de pensión a los sobrevivientes. Es un dato establecido en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 117</a> del Reglamento General de la ley del Seguro Social, el cual se establece como valor mínimo el <span class="math inline">\(50\%\)</span>.</p></li>
+<li><p>[<em>por_max_jubila</em>] <strong>Porcentaje máximo de transferencia</strong> de pensión a los sobrevivientes. Es un dato establecido en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 117</a> del Reglamento General de la ley del Seguro Social, el cual se establece como valor mínimo el <span class="math inline">\(80\%\)</span>.</p></li>
+<li><p>[<em>cred_jubila</em>] <strong>Porcentaje de Crédito unitario anual</strong> para calcular tasa remplazo jubilación se establece en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 111</a> del Reglamento General de la ley del Seguro Social.</p></li>
+<li><p>[<em>tprom_jubila</em>] <strong>Tiempo Promedio cotizado para jubilación</strong> es un dato de tipo estadístico el cual se establece en 25.</p></li>
+<li><p>[<em>tprom_remp_jubila</em>] <strong>Tasa de remplazo promedio de jubilación</strong>, este es un factor que resulta de la aplicación de la siguiente formula:</p></li>
+</ul>
+<span class="math display">\[\begin{equation}
+tprom\_remp\_jubila = \left ( tprom\_jubila - tmin\_jubila \right ) \times cred\_jubila + por\_min\_jubila
+\label{eq:tpromjubila}
+\end{equation}\]</span>
+<ul>
+<li><p>[<em>sa_af_inicio</em>] <strong>Salario de referencia para otorgar beneficio de ayuda por sepelio</strong>, este dato se establece en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 57</a> del Reglamento General de la ley del Seguro Social. Para ello tomamos el valor más bajo de <a href="https://www.ccichonduras.org/spanish/comunicados/2021/Junio/TABLA%20AJUSTE%20SALARIO%20MINIMO.pdf">(Tabla de Salario Mínimo Año 2021)</a></p></li>
+<li><p>[<em>tcrece_afunebre</em>] <strong>Tasa de incremento del salario de referencia para otorgar beneficio de ayuda por sepelio</strong>, este es un beneficio de tipo estadístico el cual representa el porcentaje de aumento que se le aplicara a lo largo de los años proyectados a la suma única de dinero que es pagada por concepto de ayuda con los gastos funerarios de un afiliado.</p></li>
+<li><p>[<em>activar_susp</em>] <strong>Activar afiliados en suspenso</strong>, para ello aplicamos el valar de uno (1) para activar la población en suspenso y cero (0) para desactivarlo.</p></li>
+<li><p>[<em>fact_rec_ga</em>] <strong>Recargo por Gasto Administrativo</strong>, es un dato de tipo estadístico en el cual colocamos el valor de 1 para dejar el escenario sin recargo y mayor que uno en caso contrario.</p></li>
+<li><p>[<em>jub_obli_ehombre</em>] y [<em>jub_obli_emujer</em>] <strong>Edad de jubilación obligatoria</strong> para hombres y mujeres, en este caso asignamos el valor de 110 años para desactivar la jubilación obligatoria.</p></li>
+<li><p>[<em>tinf_real</em>] <strong>Tasa de inflación</strong>, es un dato económico en el cual se toman en cuenta diferentes efectos en cuanto a la política monetaria, en la mayoría de los escenarios es un valor que va cambiando con los años, a excepción de los escenarios Optimista en el cual se mantiene en su porcentaje más bajo y Pesimista se establece el más alto, esto para todos los años posteriores.</p></li>
+<li><p>[<em>act_reval</em>] <strong>activar revalorización</strong>, para que el escenario a considerar realice una revalorización aplicamos 1, y si no queremos que revalorice colocamos 0. En todos los escenarios no se realiza revalorización a excepción del escenario que revaloriza las pensiones.</p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./TablasBiometricas.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tablas Biométricas</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Proyecciones.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Proyecciones por Tipo de Beneficio</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
