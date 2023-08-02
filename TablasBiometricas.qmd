@@ -23,7 +23,7 @@ Estos bloques de información son las de mayor interés dentro del análisis ya 
 -   \[*qi_X*\] probabilidad de que un inválido de género *X* fallezca.
 -   \[*qj_X*\] probabilidad de que un jubilado de género *X* fallezca.
 
-![Probabilidades de mortalidad](images/F/Img3.png)
+![Probabilidades de mortalidad](images/Img3.png)
 
 ### Salida
 
@@ -33,13 +33,13 @@ En esta sección se incluyen las probabilidades de dejar de formar parte de los 
 -   \[*pja_X*\] probabilidad que un activo de género *X* se jubile.
 -   \[*ia_X*\] probabilidad que un activo de género *X* se invalide.
 
-![Probabilidades de salidas del sistema](images/F/Img4.png){width="543"}
+![Probabilidades de salidas del sistema](images/Img4.png){width="543"}
 
 En esta sección se toman en cuenta las probabilidades que tiene un afiliado de ingresar al sistema
 
 -   \[*ping_X*\] probabilidad que un afiliado de género *X* ingrese al sistema.
 
-![Probabilidades de ingreso al sistema](images/F/Img5.png){width="399"}
+![Probabilidades de ingreso al sistema](images/Img5.png){width="399"}
 
 ### Estado Civil
 
@@ -47,7 +47,7 @@ Aquí se consideran las probabilidades que un afiliado este casado o casada, est
 
 -   \[*pcas_X*\] probabilidad de que un afiliado de género *X* este casado.
 
-![Probabilidades de estar casado](images/F/Img6.png){width="178"}
+![Probabilidades de estar casado](images/Img6.png){width="178"}
 
 ### Decrementos Múltiples
 
@@ -73,21 +73,21 @@ A continuación se muestra un ejemplo de decrementos múltiples para el caso de 
 
 $$=[@[qa_F]]*(1-SUMA(Tbiometrica[@[ia_F]:[ra_f]])/2+$$ $$([@[ia_F]]*[@[pja_F]]+([@[ia_F]]+[@[pja_F]])*[@[ra_f]])/3$$ $$-PRODUCTO(Tbiometrica[@[ia_F]:[ra_f]])/4)]$$
 
-![Ejemplo en tabla de decrementos multiples](images/F/Img7.jpg){width="627"}
+![Ejemplo en tabla de decrementos multiples](images/Img7.jpg){width="627"}
 
 ### Probabilidades de Tener Hijos de Cada Edad Hasta los 18 Años
 
 -   **Afiliados Activos**: esta tabla contiene las probabilidades de tener hijos de las distintas edades para afiliados activos de edad *x*, a esta tabla se le ha llamado *"Tphijos_A"*
 
-![Probabilidad de que un activo tenga hijos](images/F/Img8.jpg){width="630"}
+![Probabilidad de que un activo tenga hijos](images/Img8.jpg){width="630"}
 
 -   **Jubilados**: esta tabla contiene las probabilidades de tener hijos de las distintas edades por edad de jubilados, a esta tabla se le ha llamado *"Tphijos_J"*.
 
-    ![Probabilidad que un jubilado tenga hijos](images/F/Img9.png){width="700"}
+![Probabilidad que un jubilado tenga hijos](images/Img9.png){width="700"}
 
 -   **Invalidez**: esta tabla contiene las probabilidades de tener hijos de las distintas edades por edad de afiliados inválidos, a esta tabla se le ha llamado *"Tphijos_I"*.
 
-![Probabilidad de que un invalido tenga hijos](images/F/Img10.png){width="630"}
+![Probabilidad de que un invalido tenga hijos](images/Img10.png){width="630"}
 
 ### Tasas de Mortalidad y Probabilidades por Efecto COVID-19
 
@@ -113,7 +113,7 @@ $$DQ_i=INDICE(\$DY\$6:\$DY\$27,COINCIDIR(Tcovid[@Edad]-1,$$ $$\$DT\$6:\$DT\$27,1
 
 \*\**COINCIDIR* busca la edad de los afiliados en el intervalo de celdas llamado \[Hasta\] y después devuelve la posición relativa de dicho elemento en el rango.
 
-![Tasas de mortalidad por COVID](images/F/Img11.png){width="722"}
+![Tasas de mortalidad por COVID](images/Img11.png){width="722"}
 
 **NOTA**: esta sección fue tomada para el análisis del Estudio Actuarial con cifras a diciembre 2020 por la pandemia COVID-19, en otros estudios estos valores no son tomados en cuenta.
 
@@ -121,4 +121,4 @@ A la tabla de probabilidades recargadas por COVID-19 se le ha llamado *"Tcovid"*
 
 $$=Tbiometrica[@[q]]+DQ_i]$$
 
-![Probabilidades recargadas por efecto COVID](images/F/Img12.png){fig-align="center"}
+![Probabilidades recargadas por efecto COVID](images/Img12.png){fig-align="center"}

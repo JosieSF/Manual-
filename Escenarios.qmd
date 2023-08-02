@@ -26,7 +26,7 @@ Los campos establecidos en esta tabla nos permiten agrupar los datos posteriores
 
 -   \[*Agregar_Escenario*\] este botón nos permite iniciar el proceso de proyección de flujos.
 
-![Tabla de creación de escenarios](images/F/Img13.png){fig-align="center"}
+![Tabla de creación de escenarios](images/Img13.png){fig-align="center"}
 
 ### Tabla de Valores Supuestos Para Cada Escenario
 
@@ -68,7 +68,7 @@ ttecnica\_{real}=\frac{1+\ trend\_{efect}}{1+ tinf\_{real}}-1
 
 -   \[*tincre_salarial*\] **Tasa de incremento de los salarios sujetos de contribución**, este es un dato estadístico en el cual se analiza la opción a realizar un aumento en los salarios por contribuciones de un afiliado, este factor esta relacionado con la inflación
 
--   \[*ttot_contri*\] **Tasa total de contribución**, este parámetro es un elemento que se establece en el [Articulo 55-A](https://honduras.eregulations.org/media/ley_del_seguro_social.pdf) de la ley del Seguro Social el cual hace mención de que la tasa de cotización será de dos por ciento ($2\%$) para el empleador y del uno por ciento ($1\%$) para el trabajador afiliado, teniendo una tasa total de tres por ciento ($3\%$).
+-   \[*ttot_contri*\] **Tasa total de contribución**, este parámetro es un elemento que se establece en el [Articulo 55-A](https://honduras.eregulations.org/media/ley_del_seguro_social.pdf) de la ley del Seguro Social el cual hace mención de que la tasa de cotización será de dos por ciento ($2\%$) para el empleador y del uno por ciento ($1\%$) para el trabajador afiliado, teniendo una tasa total de tres por ciento ($3\%$).[@Artículo_55A]
 
 -   \[*por_ga*\] **Porcentaje de gastos administrativos** en relación al ingreso por contribuciones, este es un parámetro estadístico el cual representa el ajuste a todo lo relacionado con los egresos necesarios para el funcionamiento optimo del regimen. se mantiene en un ocho por ciento ($8\%$) en la mayor parte de los escenarios, excepto en aquel escenario que se busca un incremento en la tasa de contribución, ya que este parámetro es inversamente proporcional al porcentaje de gastos. Esta dado por la siguiente formula:
 
@@ -80,7 +80,7 @@ por\_{ga}=\frac{0.03\times 0.08}{ttot\_{contri}}
 ```
 -   \[*num_contri*\] **Numero de contribuciones al año**, según el reglamento del IHSS es de 12 contribuciones por año.
 
--   \[*por_salud*\] **Porcentaje Aporte Salud** para pensionados por Invalidez y vejez, este es un factor que se establece en el [Articulo 112](https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf) del reglamento para la atención medica de los jubilados y pensionados el cual es de diez punto cinco por ciento ($10.5\%$).
+-   \[*por_salud*\] **Porcentaje Aporte Salud** para pensionados por Invalidez y vejez, este es un factor que se establece en el [Articulo 112](https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf) del reglamento para la atención medica de los jubilados y pensionados el cual es de diez punto cinco por ciento ($10.5\%$).[@Reglamento_General]
 
 -   \[*num_pension*\] **número de pensiones por año**, se establece un total de 14 pensiones.
 
@@ -112,8 +112,7 @@ tprom\_remp\_jubila = \left ( tprom\_jubila - tmin\_jubila \right ) \times cred\
  \label{eq:tpromjubila}
 \end{equation}
 ```
-
--   \[*sa_af_inicio*\] **Salario de referencia para otorgar beneficio de ayuda por sepelio**, este dato se establece en el [Artículo 57](https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf) del Reglamento General de la ley del Seguro Social. Para ello tomamos el valor más bajo de [(Tabla de Salario Mínimo Año 2021)](https://www.ccichonduras.org/spanish/comunicados/2021/Junio/TABLA%20AJUSTE%20SALARIO%20MINIMO.pdf)
+-   \[*sa_af_inicio*\] **Salario de referencia para otorgar beneficio de ayuda por sepelio**, este dato se establece en el [Artículo 57](https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf) del Reglamento General de la ley del Seguro Social. Para ello tomamos el valor más bajo de [(Tabla de Salario Mínimo)](https://www.ccichonduras.org/spanish/comunicados/2021/Junio/TABLA%20AJUSTE%20SALARIO%20MINIMO.pdf)[@Tabla_Salario]
 
 -   \[*tcrece_afunebre*\] **Tasa de incremento del salario de referencia para otorgar beneficio de ayuda por sepelio**, este es un beneficio de tipo estadístico el cual representa el porcentaje de aumento que se le aplicara a lo largo de los años proyectados a la suma única de dinero que es pagada por concepto de ayuda con los gastos funerarios de un afiliado.
 

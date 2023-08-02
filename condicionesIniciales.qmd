@@ -25,19 +25,17 @@ En esta sección se encuentra los datos correspondientes a la población del Ré
 -   \[*tcot_sus_X*\] tiempo promedio de cotización de afiliados en suspenso de género *X* por edad.
 -   \[*Sal_sus_X*\] salario promedio de afiliados en suspenso de género *X* por edad.
 
-![Hoja de entrada de datos](images/F/Img1.png)
+![Hoja de entrada de datos](images/Img1.png)
 
 ### Tabla para Escenario de Revalorización de Pensiones
 
-A la información comprendida en esta tabla se le ha llamado *"Tpenrevalora"*. En esta sección se efectúan los cálculos para mantener el poder adquisitivo de las pensiones a lo largo del tiempo de otorgamiento del beneficio, tomando como parámetro de esta disminución el efecto de alzas en el nivel de salarios, costo de la vida a partir de la inflación y distribuyendo el incremento de conformidad a la escala del beneficio adquirido, así como lo menciona el [Artículo 152](https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf) del Reglamento General de la Ley del Seguro Social.
+A la información comprendida en esta tabla se le ha llamado *"Tpenrevalora"*. En esta sección se efectúan los cálculos para mantener el poder adquisitivo de las pensiones a lo largo del tiempo de otorgamiento del beneficio, tomando como parámetro de esta disminución el efecto de alzas en el nivel de salarios, costo de la vida a partir de la inflación y distribuyendo el incremento de conformidad a la escala del beneficio adquirido, así como lo menciona el [Artículo 152](https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf) del Reglamento General de la Ley del Seguro Social.[@Reglamento_General]
 
 -   \[*Total de afiliados*\] aquí se realiza la suma de las cantidades de pensionados Jubilados, Inválidos, Viudos y Orfandad por sexo, tomados de la tabla *"Datos_Ini"*
 
-
 $$ 
 Total\_af_{Y} =\sum_{x=1}^{110} Datos\_Ini[Y_x] 
-$$
-Donde:
+$$ Donde:
 
 $Total\_af_{Y}$ = cantidad total de afiliados por cada uno de los tipos de beneficios *Y*.\
 $Y_x$ = cantidad de afiliados de Invalidez, Viudez, Orfandad y Jubilados de edad *x*.
@@ -61,4 +59,4 @@ $Incre\_bef\_{Jub}$ = incremento por cada tipo de beneficio.
 
 La fórmula antes descrita nos establece el monto promedio con la revalorización de las pensiones para mujeres jubiladas, siguiendo esa misma analogía se determina la revalorización para el resto de grupos y género.
 
-![Tabla de Revalorización de pensiones](images/F/Img2.png){fig-align="center"}
+![Tabla de Revalorización de pensiones](images/Img2.png){fig-align="center"}

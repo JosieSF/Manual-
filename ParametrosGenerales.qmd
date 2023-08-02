@@ -6,109 +6,91 @@ A continuación se plantea la notación de los parámetros utilizados a lo largo
 
 Principales supuestos de ley, económicos y estadísticos considerados para el desarrollo del modelo.
 
-+----------------------------------------------------------------------------------------+------------------+
-| Variable                                                                               |Notación          |
-+========================================================================================+==================+
-| Porcentaje de crecimiento poblacional                                                  |$por\_crece\_pob$ |
-+----------------------------------------------------------------------------------------+------------------+
-| Tasa de rendimiento de las inversiones del fondo                                       |$trend\_efect$    |
-+----------------------------------------------------------------------------------------+------------------+
-| Tasa incremento salarial                                                               |$tinre\_salarial$ |
-+----------------------------------------------------------------------------------------+------------------+
-| Tasa total de contribución                                                             |$tincre\_contri$  |
-+----------------------------------------------------------------------------------------+------------------+
-| Porcentaje de gastos administrativos                                                   |$por\_ga$         |
-+----------------------------------------------------------------------------------------+------------------+
-| Numero de contribuciones al año                                                        |$num\_contri$     |
-+----------------------------------------------------------------------------------------+------------------+
-| Tasa de contribución para los servicios por salud                                      |$por\_salud$      |
-+----------------------------------------------------------------------------------------+------------------+
-| Número de pensiones al año                                                             |$num\_pension$    |
-+----------------------------------------------------------------------------------------+------------------+
-| Porcentaje de transferencia de pensión a la viuda                                      |$tremp\_viudez$   |
-+----------------------------------------------------------------------------------------+------------------+
-| Porcentaje de transferencia de pensión a cada huérfano                                 |$tremp\_orfa$     |
-+----------------------------------------------------------------------------------------+------------------+
-| Porcentaje de transferencia de pensión por ascendencia                                 |$tremp\_ascend$   |
-+----------------------------------------------------------------------------------------+------------------+
-| Salario de referencia para otorgar beneficio de ayuda por sepelio                      |$sa\_af\_inicio$  |
-+----------------------------------------------------------------------------------------+------------------+
-| Tasa de incremento de referencia para beneficio de ayuda por sepelio                   |$tcrece\_afunebre$|
-+----------------------------------------------------------------------------------------+------------------+
-| Tasa de inflación                                                                      |$tinf\_real$      |
-+----------------------------------------------------------------------------------------+------------------+
-| Porcentaje máximo de transferencia de pensión                                          |$por\_max\_jubila$|
-+----------------------------------------------------------------------------------------+------------------+
-| Porcentaje mínimo de transferencia de pensión                                          |$por\_min\_jubila$|
-+----------------------------------------------------------------------------------------+------------------+
-| Revalorización de pensiones                                                            |$act\_reval$      |
-+----------------------------------------------------------------------------------------+------------------+
-| Tasa técnica real                                                                      |$ttecnica\_real$  |
-+----------------------------------------------------------------------------------------+------------------+
-| Crédito unitario anual para calcular tasa de remplazo                                  |$cred\_jubila$    |
-+----------------------------------------------------------------------------------------+------------------+
+| Variable                                                             | Notación           |
+|--------------------------------------------------------|----------------|
+| Porcentaje de crecimiento poblacional                                | $por\_crece\_pob$  |
+| Tasa de rendimiento de las inversiones del fondo                     | $trend\_efect$     |
+| Tasa incremento salarial                                             | $tinre\_salarial$  |
+| Tasa total de contribución                                           | $tincre\_contri$   |
+| Porcentaje de gastos administrativos                                 | $por\_ga$          |
+| Numero de contribuciones al año                                      | $num\_contri$      |
+| Tasa de contribución para los servicios por salud                    | $por\_salud$       |
+| Número de pensiones al año                                           | $num\_pension$     |
+| Porcentaje de transferencia de pensión a la viuda                    | $tremp\_viudez$    |
+| Porcentaje de transferencia de pensión a cada huérfano               | $tremp\_orfa$      |
+| Porcentaje de transferencia de pensión por ascendencia               | $tremp\_ascend$    |
+| Salario de referencia para otorgar beneficio de ayuda por sepelio    | $sa\_af\_inicio$   |
+| Tasa de incremento de referencia para beneficio de ayuda por sepelio | $tcrece\_afunebre$ |
+| Tasa de inflación                                                    | $tinf\_real$       |
+| Porcentaje máximo de transferencia de pensión                        | $por\_max\_jubila$ |
+| Porcentaje mínimo de transferencia de pensión                        | $por\_min\_jubila$ |
+| Revalorización de pensiones                                          | $act\_reval$       |
+| Tasa técnica real                                                    | $ttecnica\_real$   |
+| Crédito unitario anual para calcular tasa de remplazo                | $cred\_jubila$     |
+
 : Tabla de variables
 
 ## Probabilidades
 
 El modelo incorpora probabilidades de contingencias a través de métricas de fallecimiento, invalidez, retiro, ingreso, estado civil o tener hijos de conformidad con lo que aplique según tipo de afiliado, edad y otras características que puedan permitir estimar de forma oportuna y aproximada los costos que derive la materialización de alguno de estos eventos.
 
-| **Descripción de probabilidad Notación**                                               | **Notación** |
-|----------------------------------------------------------------------------------------|--------------|
-| Probabilidad de que un activo fallezca a la edad $x$                                   |$qa_x$        |
-| Probabilidad de que un activo se invalide a la edad $x$                                | $ia_x$       |
-| Probabilidad de que un activo se jubile a la edad $x$                                  | $pja_x$      |
-| Probabilidad de que un activo se retire a la edad $x$                                  | $ra_x$       |
-| Probabilidad de decremento múltiple de que un activo fallezca a la edad $x$            | $qa\_dm_x$   |
-| Probabilidad de decremento múltiple de que un activo se inavlide a la edad $x$         | $ia\_dm_x$   |
-| Probabilidad de decremento múltiple de que un activo se jubile a la edad $x$           | $pja\_dm_x$  |
-| Probabilidad de decremento múltiple de que un activo se retire a la edad $x$           | $ra\_dm_x$   |
-| Probabilidad de que un inválido fallezca a la edad $x$                                 | $qi_x$       |
-| Probabilidad de que un jubilado fallezca a la edad $x$                                 | $qj_x$       |
-| Probabilidad de que un activo ingrese al sistema a la edad $x$                         | $ping_x$     |
-| Probabilidad de que un afiliado este casado a la edad $x$                              | $pcas_x$     |
-| Probabilidad de que un afiliado en estado $Y$ a la edad $x$ tenga hijos de edad $i$    | $phY_{i,x}$  |
+| **Descripción de probabilidad Notación**                                            | **Notación** |
+|---------------------------------------------------------|---------------|
+| Probabilidad de que un activo fallezca a la edad $x$                                | $qa_x$       |
+| Probabilidad de que un activo se invalide a la edad $x$                             | $ia_x$       |
+| Probabilidad de que un activo se jubile a la edad $x$                               | $pja_x$      |
+| Probabilidad de que un activo se retire a la edad $x$                               | $ra_x$       |
+| Probabilidad de decremento múltiple de que un activo fallezca a la edad $x$         | $qa\_dm_x$   |
+| Probabilidad de decremento múltiple de que un activo se inavlide a la edad $x$      | $ia\_dm_x$   |
+| Probabilidad de decremento múltiple de que un activo se jubile a la edad $x$        | $pja\_dm_x$  |
+| Probabilidad de decremento múltiple de que un activo se retire a la edad $x$        | $ra\_dm_x$   |
+| Probabilidad de que un inválido fallezca a la edad $x$                              | $qi_x$       |
+| Probabilidad de que un jubilado fallezca a la edad $x$                              | $qj_x$       |
+| Probabilidad de que un activo ingrese al sistema a la edad $x$                      | $ping_x$     |
+| Probabilidad de que un afiliado este casado a la edad $x$                           | $pcas_x$     |
+| Probabilidad de que un afiliado en estado $Y$ a la edad $x$ tenga hijos de edad $i$ | $phY_{i,x}$  |
+
 : Tabla de probabilidades
 
 ## Nombres de tablas
 
 Las tablas a continuación descritas permiten una interacción más concisa que facilita el agrupamiento de un conjunto de cálculos que cuentan con propiedades que pueden ser agrupadas, sistematizar el análisis y detallar mejor el modelo. Esta concatenación permite un llamado más eficiente en procesos donde son requeridas, a su vez ofrece una mejor compresión y uso de los datos.
 
-|                **Descripción de la tabla**                                            |**Notación**       |
-|---------------------------------------------------------------------------------------|-------------------|
-|                   **Entrada de datos**                                                |                   |
-|           Datos de cada una de las poblaciones                                        |$Datos\_ini$       |
-|           Tabla de revalorización de pensiones                                        |$Tpenrevalora$     |
-|                  **Tablas Biométricas**                                               |                   |
-|   Probabilidades por cada tipo de beneficio otorgado                                  |$Tbiometrica$      |
-| Probabilidades de que un afiliado en estado 𝑌 tenga hijos                            |$Tphijos\_Y$       |
-|      Tabla de probabilidades recargadas por COVID-19                                  |$Tcovid$           |
-|                **Creación de Escenarios**                                             |                   |
-|              Tabla de escenario a proyectar                                           |$Tesena\_supues$   |
-|              Tipos de escenarios a proyectar                                          |$Lescenarios$      |
-|      Tabla de valores supuestos para cada escenario                                   |$Tesena\_supues$   |
-|**Activos**                                                                            |                   |
-|Cantidad de afiliados activos de genero $X$                                            |$Tact\_X$          |
-|Sueldo promedio de afiliados activos de genero $X$                                     |$Tsalario\_X$      |
-|Resumen de Proyección de datos para activo de genero $X$                               |$Tresum\_AX$       |
-|Cantidad de viudeces de genero $Y$ al fallecimiento de activo de genero $X$            |$Tnviudez\_AXY$    |
-|Monto calculado de pensiones al fallecimiento de $X$                                   |$TMpenviud\_AXY$   |
-|Monto total de pensiones al fallecimiento de un activo de genero $X$                   |$Tnew_penxnum\_AXY$|
-|Cantidad de afiliados activos de genero $X$ que fallecen                               |$Tfall\_AX$        |
-|Proyección de activos fallecidos de genero $X$ Por el monto de pensión                 |$Tpenfall\_AX$     |
-|**Suspenso**                                                                           |                   |
-|Cantidad de afiliados en suspenso de genero $X$                                        |$Tsus\_X$          |
-|Sueldo promedio de los afiliados en suspenso de genero $X$                             |$Tsal_sus\_X$      |
-|Monto proyectado de pensión para un suspenso de genero $X$                             |$Tpenvej\_sus\_X$  |
-|Cantidad de afiliados en suspenso de genero $X$                                        |$Tjub\_sus\_X$     |
-|Tiempo promedio de cotización de un afiliado en suspenso de genero $X$                 |$Ttcot\_sus\_X$    |
-|**Jubilados**                                                                          |                   |
-|Cantidad de afiliados jubilados de genero $X$                                          |$Tjub\_X$          |
-|Proyección de pensiones para jubilados de genero $X$                                   |$Tpenjub\_X$       |
-|Resumen de Proyección de datos para jubilados de genero $X$                            |$Tresum\_JX$       |
-|Cantidad de viudeces de genero $Y$ al fallecimiento de un jubilado de genero $X$       |$Tnviudez\_JXY$    |
-| Monto total de pensiones al fallecimiento de un jubilado de genero $x$                |$Tnew_penxnum\_JXY$|
-|Cantidad de jubilados de genero $X$ que fallecen                                       |$Tfall\_JX$        |
-|Proyección de jubilados fallecidos de genero $X$ por el monto de pensión               |$Tpenfall\_JX$     |
-: Nombres de tablas
+| **Descripción de la tabla**                                                      | **Notación**        |
+|--------------------------------------------------------|----------------|
+| **Entrada de datos**                                                             |                     |
+| Datos de cada una de las poblaciones                                             | $Datos\_ini$        |
+| Tabla de revalorización de pensiones                                             | $Tpenrevalora$      |
+| **Tablas Biométricas**                                                           |                     |
+| Probabilidades por cada tipo de beneficio otorgado                               | $Tbiometrica$       |
+| Probabilidades de que un afiliado en estado 𝑌 tenga hijos                        | $Tphijos\_Y$        |
+| Tabla de probabilidades recargadas por COVID-19                                  | $Tcovid$            |
+| **Creación de Escenarios**                                                       |                     |
+| Tabla de escenario a proyectar                                                   | $Tesena\_supues$    |
+| Tipos de escenarios a proyectar                                                  | $Lescenarios$       |
+| Tabla de valores supuestos para cada escenario                                   | $Tesena\_supues$    |
+| **Activos**                                                                      |                     |
+| Cantidad de afiliados activos de genero $X$                                      | $Tact\_X$           |
+| Sueldo promedio de afiliados activos de genero $X$                               | $Tsalario\_X$       |
+| Resumen de Proyección de datos para activo de genero $X$                         | $Tresum\_AX$        |
+| Cantidad de viudeces de genero $Y$ al fallecimiento de activo de genero $X$      | $Tnviudez\_AXY$     |
+| Monto calculado de pensiones al fallecimiento de $X$                             | $TMpenviud\_AXY$    |
+| Monto total de pensiones al fallecimiento de un activo de genero $X$             | $Tnew_penxnum\_AXY$ |
+| Cantidad de afiliados activos de genero $X$ que fallecen                         | $Tfall\_AX$         |
+| Proyección de activos fallecidos de genero $X$ Por el monto de pensión           | $Tpenfall\_AX$      |
+| **Suspenso**                                                                     |                     |
+| Cantidad de afiliados en suspenso de genero $X$                                  | $Tsus\_X$           |
+| Sueldo promedio de los afiliados en suspenso de genero $X$                       | $Tsal_sus\_X$       |
+| Monto proyectado de pensión para un suspenso de genero $X$                       | $Tpenvej\_sus\_X$   |
+| Cantidad de afiliados en suspenso de genero $X$                                  | $Tjub\_sus\_X$      |
+| Tiempo promedio de cotización de un afiliado en suspenso de genero $X$           | $Ttcot\_sus\_X$     |
+| **Jubilados**                                                                    |                     |
+| Cantidad de afiliados jubilados de genero $X$                                    | $Tjub\_X$           |
+| Proyección de pensiones para jubilados de genero $X$                             | $Tpenjub\_X$        |
+| Resumen de Proyección de datos para jubilados de genero $X$                      | $Tresum\_JX$        |
+| Cantidad de viudeces de genero $Y$ al fallecimiento de un jubilado de genero $X$ | $Tnviudez\_JXY$     |
+| Monto total de pensiones al fallecimiento de un jubilado de genero $x$           | $Tnew_penxnum\_JXY$ |
+| Cantidad de jubilados de genero $X$ que fallecen                                 | $Tfall\_JX$         |
+| Proyección de jubilados fallecidos de genero $X$ por el monto de pensión         | $Tpenfall\_JX$      |
 
+: Nombres de tablas
