@@ -291,11 +291,11 @@ Total_j=\sum_{x=18}^{110}{C{anJ}_{x,j}}
 <h3 data-number="9.1.3" class="anchored" data-anchor-id="proyección-de-pensiones"><span class="header-section-number">9.1.3</span> Proyección de Pensiones</h3>
 <p>Esta tabla llamada <em>“Tpenjub_F”</em> contiene la proyección del monto por pensiones que se le otorga a un jubilado. Para ello se hace uso de la siguiente formula, la cual establece una igualdad con la fórmula 5.3.3 Pensión por vejez que se encuentra en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020):</p>
 <p><span class="math display">\[\begin{align}
-{Pen\_vJ}_{x,j} &amp; = \nonumber \\
-&amp; \hspace{2 em}{Pen\_vJ}_{x-1,j-1} \times \left ( 1+trev\_pen_j \right ) \times {CanJ}_{x-1,j-1} \times \left ( 1-{qj}_{x-1} \right ) \nonumber \\
-&amp; \underline{ \hspace{1.2 em} +  { Pen\_v}_{x,j}\times{Can}_{x-1,j-1}\times{pja\_{dm}}_{x-1}+{Pen\_vs}_{x,j}\times{jub\_sus}_{x,j} \hspace{2 em}} \nonumber \\
-&amp;\hspace{1 em}{CanJ}_{x-1,j-1}\times\left(1-{qj}_{x-1}\right)+{Can}_{x-1,j-1}\times{pja\_{dm}}_{x-1}+{jub\_sus}_{x,j}
-\end{align}\]</span> Donde:</p>
+{Pen\_vJ}_{x,j}  = &amp;
+\hspace{0.5 em}{[Pen\_vJ}_{x-1,j-1} \times \left ( 1+trev\_pen_j \right ) \times {CanJ}_{x-1,j-1} \times \left ( 1-{qj}_{x-1} \right ) + \nonumber \\&amp; \underline{\hspace{0.5 em}{Pen\_v}_{x,j}\times{Can}_{x-1,j-1}\times{pja\_{dm}}_{x-1}+{Pen\_vs}_{x,j}\times{jub\_sus}_{x,j}] \hspace{0.5 em} } \nonumber
+\\&amp;\hspace{6.5 cm}{CanJ}_{x,j}
+\end{align}\]</span></p>
+<p>Donde:</p>
 <p><span class="math inline">\({Pen\_vJ}_{x,j}\)</span> = monto calculado de pensión para jubilados de edad <em>x</em> en el año <em>j</em>.<br>
 <span class="math inline">\({trev\_{pen}}_j\)</span> = tasa de revalorización de pensiones por año proyectado.<br>
 <span class="math inline">\({CanJ}_{x-1,j-1}\)</span> = cantidad de afiliados jubilados de edad <em>x-1</em> en el año anterior.<br>
