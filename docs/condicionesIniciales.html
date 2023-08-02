@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -253,14 +272,14 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/F/Img1.png" class="img-fluid figure-img"></p>
+<p><img src="images/Img1.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Hoja de entrada de datos</figcaption>
 </figure>
 </div>
 </section>
 <section id="tabla-para-escenario-de-revalorización-de-pensiones" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="tabla-para-escenario-de-revalorización-de-pensiones"><span class="header-section-number">3.1.2</span> Tabla para Escenario de Revalorización de Pensiones</h3>
-<p>A la información comprendida en esta tabla se le ha llamado <em>“Tpenrevalora”</em>. En esta sección se efectúan los cálculos para mantener el poder adquisitivo de las pensiones a lo largo del tiempo de otorgamiento del beneficio, tomando como parámetro de esta disminución el efecto de alzas en el nivel de salarios, costo de la vida a partir de la inflación y distribuyendo el incremento de conformidad a la escala del beneficio adquirido, así como lo menciona el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 152</a> del Reglamento General de la Ley del Seguro Social.</p>
+<p>A la información comprendida en esta tabla se le ha llamado <em>“Tpenrevalora”</em>. En esta sección se efectúan los cálculos para mantener el poder adquisitivo de las pensiones a lo largo del tiempo de otorgamiento del beneficio, tomando como parámetro de esta disminución el efecto de alzas en el nivel de salarios, costo de la vida a partir de la inflación y distribuyendo el incremento de conformidad a la escala del beneficio adquirido, así como lo menciona el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 152</a> del Reglamento General de la Ley del Seguro Social.<span class="citation" data-cites="Reglamento_General">(<a href="references.html#ref-Reglamento_General" role="doc-biblioref">IHSS 2005</a>)</span></p>
 <ul>
 <li>[<em>Total de afiliados</em>] aquí se realiza la suma de las cantidades de pensionados Jubilados, Inválidos, Viudos y Orfandad por sexo, tomados de la tabla <em>“Datos_Ini”</em></li>
 </ul>
@@ -285,12 +304,17 @@ Tpenrev =\frac{Jubilados\_F \times Pen\_Jub\_F + \frac{Jubilados\_F}{Total\_af_{
 <p>La fórmula antes descrita nos establece el monto promedio con la revalorización de las pensiones para mujeres jubiladas, siguiendo esa misma analogía se determina la revalorización para el resto de grupos y género.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/F/Img2.png" class="img-fluid figure-img"></p>
+<p><img src="images/Img2.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Tabla de Revalorización de pensiones</figcaption>
 </figure>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Reglamento_General" class="csl-entry" role="listitem">
+IHSS, Reglamento. 2005. <span>“Pdf: Reglamento General de La Ley Del Seguro Social.”</span> <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf</a>.
+</div>
+</div>
 </section>
 </section>
 

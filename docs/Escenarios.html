@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -247,7 +266,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/F/Img13.png" class="img-fluid figure-img"></p>
+<p><img src="images/Img13.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Tabla de creación de escenarios</figcaption>
 </figure>
 </div>
@@ -279,7 +298,7 @@ ttecnica\_{real}=\frac{1+\ trend\_{efect}}{1+ tinf\_{real}}-1
 <li><p>[<em>trev_pen</em>] <strong>Tasa de revalorización de pensiones</strong>, este factor depende en su totalidad de la tasa de inflación, es por ello que colocamos el mismo valor en ambos campos.</p></li>
 <li><p>[<em>trev_efect</em>] Tasa de rendimiento de las inversiones del fondo o la <strong>Tasa de rendimiento efectiva</strong> es un parámetro estadístico y nos permite ver el beneficio que se obtendrá por mantener dinero en un producto financiero o el rendimiento de una inversión a lo largo de los años proyectados y dependiendo del escenario que se plantee.</p></li>
 <li><p>[<em>tincre_salarial</em>] <strong>Tasa de incremento de los salarios sujetos de contribución</strong>, este es un dato estadístico en el cual se analiza la opción a realizar un aumento en los salarios por contribuciones de un afiliado, este factor esta relacionado con la inflación</p></li>
-<li><p>[<em>ttot_contri</em>] <strong>Tasa total de contribución</strong>, este parámetro es un elemento que se establece en el <a href="https://honduras.eregulations.org/media/ley_del_seguro_social.pdf">Articulo 55-A</a> de la ley del Seguro Social el cual hace mención de que la tasa de cotización será de dos por ciento (<span class="math inline">\(2\%\)</span>) para el empleador y del uno por ciento (<span class="math inline">\(1\%\)</span>) para el trabajador afiliado, teniendo una tasa total de tres por ciento (<span class="math inline">\(3\%\)</span>).</p></li>
+<li><p>[<em>ttot_contri</em>] <strong>Tasa total de contribución</strong>, este parámetro es un elemento que se establece en el <a href="https://honduras.eregulations.org/media/ley_del_seguro_social.pdf">Articulo 55-A</a> de la ley del Seguro Social el cual hace mención de que la tasa de cotización será de dos por ciento (<span class="math inline">\(2\%\)</span>) para el empleador y del uno por ciento (<span class="math inline">\(1\%\)</span>) para el trabajador afiliado, teniendo una tasa total de tres por ciento (<span class="math inline">\(3\%\)</span>).<span class="citation" data-cites="Artículo_55A">(<a href="references.html#ref-Artículo_55A" role="doc-biblioref">2001</a>)</span></p></li>
 <li><p>[<em>por_ga</em>] <strong>Porcentaje de gastos administrativos</strong> en relación al ingreso por contribuciones, este es un parámetro estadístico el cual representa el ajuste a todo lo relacionado con los egresos necesarios para el funcionamiento optimo del regimen. se mantiene en un ocho por ciento (<span class="math inline">\(8\%\)</span>) en la mayor parte de los escenarios, excepto en aquel escenario que se busca un incremento en la tasa de contribución, ya que este parámetro es inversamente proporcional al porcentaje de gastos. Esta dado por la siguiente formula:</p></li>
 </ul>
 <span class="math display">\[\begin{equation}
@@ -288,7 +307,7 @@ por\_{ga}=\frac{0.03\times 0.08}{ttot\_{contri}}
 \end{equation}\]</span>
 <ul>
 <li><p>[<em>num_contri</em>] <strong>Numero de contribuciones al año</strong>, según el reglamento del IHSS es de 12 contribuciones por año.</p></li>
-<li><p>[<em>por_salud</em>] <strong>Porcentaje Aporte Salud</strong> para pensionados por Invalidez y vejez, este es un factor que se establece en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Articulo 112</a> del reglamento para la atención medica de los jubilados y pensionados el cual es de diez punto cinco por ciento (<span class="math inline">\(10.5\%\)</span>).</p></li>
+<li><p>[<em>por_salud</em>] <strong>Porcentaje Aporte Salud</strong> para pensionados por Invalidez y vejez, este es un factor que se establece en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Articulo 112</a> del reglamento para la atención medica de los jubilados y pensionados el cual es de diez punto cinco por ciento (<span class="math inline">\(10.5\%\)</span>).<span class="citation" data-cites="Reglamento_General">(<a href="references.html#ref-Reglamento_General" role="doc-biblioref">IHSS 2005</a>)</span></p></li>
 <li><p>[<em>num_pension</em>] <strong>número de pensiones por año</strong>, se establece un total de 14 pensiones.</p></li>
 <li><p>[<em>dif_edad_matri</em>] <strong>Diferencia de edades entre hombres y mujeres casados</strong>, este es un dato de tipo estadístico el cual se establece en 5 años.</p></li>
 <li><p>[<em>tremp_viudez</em>] <strong>Tasa remplazo pensiones viudez</strong>, es un beneficio establecido en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 124</a> del Reglamento General de la ley del Seguro Social el cual se establece en <span class="math inline">\(40\%\)</span></p></li>
@@ -307,7 +326,7 @@ tprom\_remp\_jubila = \left ( tprom\_jubila - tmin\_jubila \right ) \times cred\
 \label{eq:tpromjubila}
 \end{equation}\]</span>
 <ul>
-<li><p>[<em>sa_af_inicio</em>] <strong>Salario de referencia para otorgar beneficio de ayuda por sepelio</strong>, este dato se establece en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 57</a> del Reglamento General de la ley del Seguro Social. Para ello tomamos el valor más bajo de <a href="https://www.ccichonduras.org/spanish/comunicados/2021/Junio/TABLA%20AJUSTE%20SALARIO%20MINIMO.pdf">(Tabla de Salario Mínimo Año 2021)</a></p></li>
+<li><p>[<em>sa_af_inicio</em>] <strong>Salario de referencia para otorgar beneficio de ayuda por sepelio</strong>, este dato se establece en el <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">Artículo 57</a> del Reglamento General de la ley del Seguro Social. Para ello tomamos el valor más bajo de <a href="https://www.ccichonduras.org/spanish/comunicados/2021/Junio/TABLA%20AJUSTE%20SALARIO%20MINIMO.pdf">(Tabla de Salario Mínimo)</a><span class="citation" data-cites="Tabla_Salario">(<a href="references.html#ref-Tabla_Salario" role="doc-biblioref">2021</a>)</span></p></li>
 <li><p>[<em>tcrece_afunebre</em>] <strong>Tasa de incremento del salario de referencia para otorgar beneficio de ayuda por sepelio</strong>, este es un beneficio de tipo estadístico el cual representa el porcentaje de aumento que se le aplicara a lo largo de los años proyectados a la suma única de dinero que es pagada por concepto de ayuda con los gastos funerarios de un afiliado.</p></li>
 <li><p>[<em>activar_susp</em>] <strong>Activar afiliados en suspenso</strong>, para ello aplicamos el valar de uno (1) para activar la población en suspenso y cero (0) para desactivarlo.</p></li>
 <li><p>[<em>fact_rec_ga</em>] <strong>Recargo por Gasto Administrativo</strong>, es un dato de tipo estadístico en el cual colocamos el valor de 1 para dejar el escenario sin recargo y mayor que uno en caso contrario.</p></li>
@@ -317,6 +336,17 @@ tprom\_remp\_jubila = \left ( tprom\_jubila - tmin\_jubila \right ) \times cred\
 </ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Tabla_Salario" class="csl-entry" role="listitem">
+Camara de Comercio e Industrias de Cortes. 2021. <span>“Pdf: Tabla de Salario Mínimo.”</span> <a href="https://www.ccichonduras.org/spanish/comunicados/2021/Junio/TABLA%20AJUSTE%20SALARIO%20MINIMO.pdf">https://www.ccichonduras.org/spanish/comunicados/2021/Junio/TABLA%20AJUSTE%20SALARIO%20MINIMO.pdf</a>.
+</div>
+<div id="ref-Artículo_55A" class="csl-entry" role="listitem">
+IHSS. 2001. <span>“Pdf: Ley Del Seguro Social Art. 55-a.”</span> <a href="https://honduras.eregulations.org/media/ley_del_seguro_social.pdf">https://honduras.eregulations.org/media/ley_del_seguro_social.pdf</a>.
+</div>
+<div id="ref-Reglamento_General" class="csl-entry" role="listitem">
+IHSS, Reglamento. 2005. <span>“Pdf: Reglamento General de La Ley Del Seguro Social.”</span> <a href="https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf">https://www.ilo.org/dyn/travail/docs/930/Reglamento%20General%20de%20la%20%20Ley%20del%20IHSS.pdf</a>.
+</div>
+</div>
 </section>
 </section>
 
