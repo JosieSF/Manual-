@@ -290,10 +290,9 @@ Total\_j=\sum_{x=18}^{110}{C{anV}_{x,j}}
 <h3 data-number="11.1.3" class="anchored" data-anchor-id="proyección-de-pensiones-promedio"><span class="header-section-number">11.1.3</span> Proyección de Pensiones Promedio</h3>
 <p>Esta tabla llamada <em>“Tpenviud_F”</em> contiene las proyecciones del monto promedio de pensiones otorgadas a viudas por año y por edad, para dicho cálculo se toma en cuenta la tasa de reemplazo y la tasa de inflación. Para el primer año del análisis <span class="math inline">\([{Pen}\_{viud}]\)</span>, se busca en la tabla <em>“Datos_Ini”</em> de la hoja <em>[Entrada Datos]</em> el valor de la pensión promedio de mujeres viudas. Para el resto de los años proyectados <span class="math inline">\([{a1}-{a100}]\)</span>, se hace uso de la fórmula 7.3.3 Pensión por viudez que se encuentra en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020):</p>
 <span class="math display">\[\begin{align}
-{PensV}_{x,j\ }= \nonumber \\
-&amp; \hspace{1.8 em} PensV_{x-1,j-1} \times \left(1-tinf\_real_j \right ) \times CanV_{x-1,j-1} \times \left(1-qa_{x-1}\right ) \nonumber \\
-&amp;\underline{\hspace{1 em}+ tremp\_viudez_j \times \left(TPen\_v_{x-5,j} +TPen\_vI_{x-5,j} + TPen\_vJ_{x,j} \right ) \hspace{1 em}}\nonumber \\
-&amp; CanV_{x-1,j-1} \times \left(1-qa_{x-1}\right) +CanV\_A_{x-5,j} + CanV\_I_{x-5,j} + CanV\_J_{x,j}
+{PensV}_{x,j\ } &amp; = \hspace{1.8 em} [ PensV_{x-1,j-1} \times \left(1-tinf\_real_j \right ) \times CanV_{x-1,j-1} \times \left(1-qa_{x-1}\right ) \nonumber \\
+&amp;\hspace{3 em}\underline{ + tremp\_viudez_j \times \left(TPen\_v_{x-5,j} +TPen\_vI_{x-5,j} + TPen\_vJ_{x,j} \right ) ]}\nonumber \\
+&amp; \hspace{8 cm} {CanV}_{x,j}
 \end{align}\]</span>
 <p>Donde:</p>
 <p><span class="math inline">\({PensV}_{x,j}\)</span> = monto de pensión para un viudo de edad <em>x</em> en el año <em>j</em>.<br>
@@ -301,9 +300,6 @@ Total\_j=\sum_{x=18}^{110}{C{anV}_{x,j}}
 <span class="math inline">\({TPen\_vI}_{x,j}\)</span> = monto total de pensión al fallecimiento de un inválido de edad <em>x</em> en el año <em>j</em>.<br>
 <span class="math inline">\({TPen\_vJ}_{x,j}\)</span> = monto total de pensión al fallecimiento de un jubilado de edad <em>x</em> en el año <em>j</em>.<br>
 <span class="math inline">\({CanV}_{x,j}\)</span> = cantidad de viudas de edad <em>x</em> en el año <em>j</em>.<br>
-<span class="math inline">\(Can{V\_A}_{x,j}\)</span> = cantidad de viudas al fallecimiento de un activo de edad <em>x</em> en el año <em>j</em>.<br>
-<span class="math inline">\(Can{V\_I}_{x,j}\)</span> = cantidad de viudas al fallecimiento de un invalido de edad <em>x</em> en el año <em>j</em>.<br>
-<span class="math inline">\(Can{V\_J}_{x,j}\)</span> = cantidad de viudas al fallecimiento de un jubilado de edad <em>x</em> en el año <em>j</em>.<br>
 <span class="math inline">\({qa}_{x-1}\)</span> = probabilidad de que un activo fallezca a la edad <em>x-1</em>.<br>
 <span class="math inline">\({tremp\_viudez}_j\)</span> = porcentaje de transferencia de pensión a la viuda.<br>
 <span class="math inline">\({tinf\_{real}}_j\)</span> = tasa de inflación real.</p>
