@@ -29,7 +29,7 @@ ${qa}_{x-1}$ = probabilidad de que un activo fallezca a la edad *x-1*.
 
 Lo antes descrito es una igualdad a la fórmula 7.3.1 y 7.3.2 Cantidad de afiliados en estado de invalidez por edad y Cantidad de afiliados en estado de invalidez que fallecen respectivamente y que se encuentra en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020):
 
-![Cantidad de afiliados en estado de invalidez](images/F/Img42.png){fig-align="center"}
+![Cantidad de afiliados en estado de invalidez](images/Img42.png){fig-align="center"}
 
 ### Tabla Resumen
 
@@ -56,7 +56,7 @@ Total\_j=\sum_{x=18}^{110}{C{anV}_{x,j}}
 {Fallecidos}_j=\sum_{x=18}^{109}{qa}_{x+1}\times{CanV}_{j-1,x}
 \end{equation}
 ```
-![Resumen de proyección para viudez](images/F/Img43.png){fig-align="center"}
+![Resumen de proyección para viudez](images/Img43.png){fig-align="center"}
 
 ### Proyección de Pensiones Promedio
 
@@ -64,10 +64,9 @@ Esta tabla llamada *"Tpenviud_F"* contiene las proyecciones del monto promedio d
 
 ```{=tex}
 \begin{align}
-{PensV}_{x,j\ }= \nonumber \\
-& \hspace{1.8 em} PensV_{x-1,j-1} \times \left(1-tinf\_real_j \right ) \times CanV_{x-1,j-1} \times \left(1-qa_{x-1}\right ) \nonumber \\
-&\underline{\hspace{1 em}+ tremp\_viudez_j \times \left(TPen\_v_{x-5,j} +TPen\_vI_{x-5,j} + TPen\_vJ_{x,j} \right ) \hspace{1 em}}\nonumber \\
-& CanV_{x-1,j-1} \times \left(1-qa_{x-1}\right) +CanV\_A_{x-5,j} + CanV\_I_{x-5,j} + CanV\_J_{x,j}
+{PensV}_{x,j\ } & = \hspace{1.8 em} [ PensV_{x-1,j-1} \times \left(1-tinf\_real_j \right ) \times CanV_{x-1,j-1} \times \left(1-qa_{x-1}\right ) \nonumber \\
+&\hspace{3 em}\underline{ + tremp\_viudez_j \times \left(TPen\_v_{x-5,j} +TPen\_vI_{x-5,j} + TPen\_vJ_{x,j} \right ) ]}\nonumber \\
+& \hspace{8 cm} {CanV}_{x,j}
 \end{align}
 ```
 Donde:
@@ -77,14 +76,11 @@ ${TPen_v}_{x,j}$ = monto total de pensión al fallecimiento de un activo de edad
 ${TPen\_vI}_{x,j}$ = monto total de pensión al fallecimiento de un inválido de edad *x* en el año *j*.\
 ${TPen\_vJ}_{x,j}$ = monto total de pensión al fallecimiento de un jubilado de edad *x* en el año *j*.\
 ${CanV}_{x,j}$ = cantidad de viudas de edad *x* en el año *j*.\
-$Can{V\_A}_{x,j}$ = cantidad de viudas al fallecimiento de un activo de edad *x* en el año *j*.\
-$Can{V\_I}_{x,j}$ = cantidad de viudas al fallecimiento de un invalido de edad *x* en el año *j*.\
-$Can{V\_J}_{x,j}$ = cantidad de viudas al fallecimiento de un jubilado de edad *x* en el año *j*.\
 ${qa}_{x-1}$ = probabilidad de que un activo fallezca a la edad *x-1*.\
 ${tremp\_viudez}_j$ = porcentaje de transferencia de pensión a la viuda.\
 ${tinf\_{real}}_j$ = tasa de inflación real.
 
-![proyecciones del monto promedio de pensiones otorgadas a viudas](images/F/Img44.png){fig-align="center"}
+![proyecciones del monto promedio de pensiones otorgadas a viudas](images/Img44.png){fig-align="center"}
 
 ### Resumen de Proyección de datos
 
@@ -117,6 +113,4 @@ ${CanV}_{x,j}$ = cantidad de viudas de edad *x* en el año *j*.\
 ${PensV}_{x,j}$ = monto de pensión por viudez de edad *x* en el año *j*.\
 ${num\_pension}_j$ = número de pensiones en el año.
 
-![Resumen de proyecciones](images/F/Img45.png){fig-align="center"}
-
-
+![Resumen de proyecciones](images/Img45.png){fig-align="center"}
