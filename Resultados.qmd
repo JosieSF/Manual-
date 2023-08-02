@@ -8,7 +8,7 @@ Aquí se establece un resumen de las proyecciones con cada uno de los escenarios
 
 En la parte superior izquierda de la hoja nos encontramos una lista desplegable en la cual se puede seleccionar el tipo de escenario que deseamos analizar y proyectar a esta sección se le ha llamado *"escen_select_proyesum"*.
 
-![tipo de escenario](images/F/Img50.png){fig-align="center"}
+![tipo de escenario](images/Img50.png){fig-align="center"}
 
 ### Resumen de Proyeccion \[Tproy_resumen\]
 
@@ -214,10 +214,10 @@ $tinf\_real$ = tasa de inflación.
 {Prim\_reparto}_n=\ \frac{{ttot\_contri}_n\times{gas\_oper}_n}{{ing\_oper}_n}
 \end{equation}
 ```
-![Resumen de Proyección](images/F/Img51.png){fig-align="center"}
+![Resumen de Proyección](images/Img51.png){fig-align="center"}
 
 ### Indicadores Claves
 
 En esta sección del resumen de proyecciones se encuentran parámetros importantes los cuales nos indican el estado del régimen según los datos proyectados, uno de estos factores son los puntos críticos, estos indicadores financieros se utilizan para ponderar y evaluar los resultados de las operaciones del Régimen, dichos indicadores nos muestran los años en los cuales los ingresos que recibe el régimen no son suficientes para cubrir los gastos del mismo y por ello se incurren en una serie de procesos que va desde el utilizar ingresos financieros hasta el consumo total del patrimonio. Y por último se analiza la situación actuarial del régimen en el año base de proyección, así como la probable tendencia futura de sus ingresos y gastos.
 
-![Indicadores claves](images/F/Img52.png){fig-align="center"}
+![Indicadores claves](images/Img52.png){fig-align="center"}

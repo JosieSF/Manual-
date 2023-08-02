@@ -20,7 +20,7 @@ ${CanS}_{x-1,j-1}$ = cantidad de afiliados en suspenso de edad *x-1* en el año 
 ${qa}_x$ = probabilidad de que un activo fallezca a la edad *x*.\
 $p{ja\_dm}_x$ = probabilidad de decremento múltiple de que un activo se jubile a la edad *x*.
 
-![Cantidad de afiliados en suspenso](images/F/Img22.png){fig-align="center"}
+![Cantidad de afiliados en suspenso](images/Img22.png){fig-align="center"}
 
 ### Proyección De Salarios
 
@@ -36,7 +36,7 @@ ${Sal\_sus}_{x,j}$ = salario promedio de los afiliados en suspenso de edad *x* e
 ${Sal\_sus}_{x-1,j-1}$ = salario promedio de los afiliados en suspenso de edad *x-1* en el año anterior.\
 ${tincre\_sal}_j$ = tasa de incremento salarial en el año *j*.
 
-![Proyección de salarios para personas en suspenso](images/F/Img23.png){fig-align="center"}
+![Proyección de salarios para personas en suspenso](images/Img23.png){fig-align="center"}
 
 ### Proyección de Monto Calculado de Pensiones de vejez de Afiliados en Suspenso
 
@@ -45,7 +45,6 @@ A esta tabla se le ha llamado *"Tpenvej_sus_F"* y estos parámetros se determina
 ```{=tex}
 \begin{align} {Pen\_vs}_{x,j} &= \left[\left({por\_min\_jub}_j\right)+\left({tcot\_sus}_{x,j}- \right. \right.\nonumber  \\ &\qquad \left. \left. {tmin\_jub}_j\right)\times{cred\_jubila}_j\right]\times{Sal\_sus}_{x,j} \end{align}
 ```
-
 Donde:
 
 ${Pen\_vejs}_{x,j}$ = monto proyectado de pensión por vejez de afiliados en suspenso de edad *x* para el año *j*.\
@@ -55,7 +54,7 @@ $t{min\_{jub}}_j$ = tiempo mínimo de cotización.
 
 La ecuación presentada anteriormente y descrita en la fórmula de Excel se muestra a continuación.
 
-![Proyección de pensiones](images/F/Img24.png){fig-align="center"}
+![Proyección de pensiones](images/Img24.png){fig-align="center"}
 
 ### Proyección De Jubilados
 
@@ -74,8 +73,7 @@ ${CanS}_{x-1,j-1}$ = cantidad de afiliados en suspenso de edad *x-1* en el año 
 $p{ja\_dm}_x$ = probabilidad de decremento múltiple de que un activo se jubile a la edad *x*.\
 $activar\_susp$ = factor donde se toma en cuenta la población en suspenso.
 
-![Proyección de jubilados en suspenso](images/F/Img25.png){fig-align="center"}
-
+![Proyección de jubilados en suspenso](images/Img25.png){fig-align="center"}
 
 ### Proyección Tiempo Cotizado De Afiliadas En Suspenso
 
@@ -91,5 +89,3 @@ Donde:
 ${tcot\_ini}_{x,j}$ = tiempo de cotización inicial de afiliados en suspenso de edad *x-1* para el año anterior.
 
 **NOTA**: Todos los parámetros y tablas antes descritas siguen el mismo patrón y proceso para el caso masculino, habiendo ligeros cambios en los nombres siendo este cambio por la inicial del género (*M*).
-
-

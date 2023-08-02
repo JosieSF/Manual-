@@ -27,7 +27,7 @@ ${qi}_{x-1}$ = probabilidad de que un inválido fallezca a la edad *x-1*.
 
 Lo antes descrito es una igualdad a la fórmula 6.3.1 y 6.3.2 Cantidad de afiliados en estado de invalidez por edad y Cantidad de afiliados en estado de invalidez que fallecen respectivamente y que se encuentra en (Nota Técnica de Proyección de Flujos del Régimen del Seguro de Previsión Social, a diciembre 2020):
 
-![Cantidad de afiliados en estado de invalidez](images/F/Img34.png){fig-align="center"}
+![Cantidad de afiliados en estado de invalidez](images/Img34.png){fig-align="center"}
 
 ### Tabla Resumen
 
@@ -58,7 +58,7 @@ $C{anI}_{x,j}$ = cantidad de afiliados en estado de invalidez de edad *x* en el 
 {Fallecidos}_j=\sum_{x=18}^{110}{MueI}_{x,j}
 \end{equation}
 ```
-![Tabla resumen de afiliados en estado de invalidez](images/F/Img35.png){fig-align="center"}
+![Tabla resumen de afiliados en estado de invalidez](images/Img35.png){fig-align="center"}
 
 ### Proyección de Pensiones
 
@@ -66,10 +66,10 @@ Esta tabla llamada *"Tpeninv_F"* contiene la proyección del monto por pensiones
 
 ```{=tex}
 \begin{align}
-Pen\_vI_{x,j} = \nonumber \\
-& Pen\_vI_{x-1,j-1} \times \left (1+trevpen_j \right ) \times ia\_dm_{x-1}\times \left(1-qi_{x-1}\right) \nonumber \\
-& \underline{\hspace{4 em}+Pen\_v_{x+5,j}\times Can_{x-1,j-1}\times ia\_dm_{x-1} \hspace{4 em}}\nonumber \\ 
-&\hspace{1 em} CanI_{x-1,j-1}\times\left(1-qi_{x-1}\right)+Can_{x-1,j-1}\times ia\_dm_{x-1}
+Pen\_vI_{x,j} = 
+& [Pen\_vI_{x-1,j-1} \times \left (1+trevpen_j \right ) \times ia\_dm_{x-1}\times \left(1-qi_{x-1}\right) \nonumber \\
+& \underline{\hspace{4 em}+Pen\_v_{x+5,j}\times Can_{x-1,j-1}\times ia\_dm_{x-1}] \hspace{4 em}}\nonumber \\ 
+&\hspace{5 cm} CanI_{x,j}
 \end{align}
 ```
 Donde:
@@ -85,7 +85,7 @@ ${qi}_{x-1}$ = probabilidad de que un inválido fallezca a la edad *x-1*.
 
 **Nota**: Para el caso de análisis comparativo de viudez, para tener edades comparativas entre estas en caso femenino hay que tener *x-5* años y para el caso masculino serian *x+5* años.
 
-![Monto de pensiones que se le otorga a un inválido](images/F/Img36.png){fig-align="center"}
+![Monto de pensiones que se le otorga a un inválido](images/Img36.png){fig-align="center"}
 
 ### Resumen de Proyección de datos
 
@@ -142,7 +142,7 @@ $tcrece\_afunebre$ = tasa de incremento del salario de referencia para otorgar b
 Tot.Ben.A.f_j=AyudaFunebre_j\times{Fallecidos}_j
 \end{equation}
 ```
-![Tabla resumen de proyecciones](images/F/Img37.png){fig-align="center"}
+![Tabla resumen de proyecciones](images/Img37.png){fig-align="center"}
 
 ### Proyección de viudos
 
@@ -160,7 +160,7 @@ ${qi}_{x-1}$ = probabilidad de fallecer de una invalida de edad *x-1*.\
 $pcas\_{x-1}$ = probabilidad de que un afiliado este casado a la edad *x-1*.\
 ${CanI}_{x-1-5,j-1}$ = cantidad de afiliados inválidos proyectados para el año anterior a la edad *x-6*.
 
-![Cantidad de viudos al fallecimiento de un invalido](images/F/Img38.png){fig-align="center"}
+![Cantidad de viudos al fallecimiento de un invalido](images/Img38.png){fig-align="center"}
 
 ### Proyección del producto de monto pensión por número de pensiones nuevas de viudez, para calcular pensiones promedio de invalidez.
 
@@ -177,7 +177,7 @@ ${TPen\_vI}_{x,j}$ = monto Total de pensión al fallecimiento de un inválido de
 ${Pen\_vI}_{x,j}$ = monto de pensión al fallecimiento de un inválido de edad x en el año *j*.\
 $Can{V\_I}_{x,j}$ = cantidad de viudos al fallecimiento de un inválido de edad *x* en el año *j*.
 
-![monto total de las pensiones que se otorgan por el fallecimiento de un invalido](images/F/Img39.png){fig-align="center"}
+![monto total de las pensiones que se otorgan por el fallecimiento de un invalido](images/Img39.png){fig-align="center"}
 
 ### Proyección Fallecidos Activos
 
@@ -194,7 +194,7 @@ $MueI_{x,j}$ = cantidad de inválidos que fallecen a la edad *x* en el año *j*.
 $CanI_{x-1,j-1}$ = cantidad de afiliados inválidos de edad *x-1* en el año anterior.\
 ${qi}_{x-1}$ = probabilidad de que un inválido fallezca a la edad *x-1*.
 
-![Cantidad de afiliados en estado de invalidez que fallecen](images/F/Img40.png){fig-align="center"}
+![Cantidad de afiliados en estado de invalidez que fallecen](images/Img40.png){fig-align="center"}
 
 ### Proyección De Fallecidos Por El Monto De Pensión
 
@@ -212,6 +212,6 @@ ${qi}_{x-1}$ = probabilidad de que un inválido fallezca a la edad *x-1*.\
 $Ca{nI}_{j-1,x-1+d}$ = cantidad de afiliados inválidos proyectada de edad de *x-1+d* años para el año anterior, *d = 0* en caso femenino y *d = 5* en caso masculino.\
 ${Pen\_vI}_{x,j}$ = monto de pensión al fallecimiento de un inválido de edad *x* en el año *j*.
 
-![cantidad de pensión proyectada para un invalido que fallece](images/F/Img41.png){fig-align="center"}
+![cantidad de pensión proyectada para un invalido que fallece](images/Img41.png){fig-align="center"}
 
 **NOTA**: Todos los parámetros y tablas antes descritas siguen el mismo patrón y proceso para el caso masculino, habiendo ligeros cambios en los nombres siendo este cambio por la inicial del género (*M*).
